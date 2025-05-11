@@ -31,25 +31,23 @@ function mostrarSeccion(id) {
   
     // ——— Spans ———
     linkSpans.forEach(span => {
-      const wrapper = span.parentElement;
-      if (span.id === `${id}-span`) {
-        // mostrar wrapper inmediato
-        wrapper.classList.remove('hidden');
-        // forzar estado inicial
-        span.classList.add('translate-y-full');
-        // en el siguiente tick, animar a 0
-        setTimeout(()=>{
-          span.classList.remove('translate-y-full');
-          span.classList.add('translate-y-0');
-        },50);
-      } else {
-        // ocultar wrapper inmediato
-        wrapper.classList.add('hidden');
-        // resetear posición para la próxima vez
-        span.classList.remove('translate-y-0');
-        span.classList.add('translate-y-full');
+      if (span.id !== `${id}-span`) {
+        // Ocultar todos los que no son el actual
+        span.classList.remove('translate-y-0', 'opacity-100');
+        span.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
       }
     });
+
+    // Esperar 600ms antes de mostrar el nuevo (después de la animación de salida)
+    setTimeout(() => {
+      linkSpans.forEach(span => {
+        if (span.id === `${id}-span`) {
+          span.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+          span.classList.add('translate-y-0', 'opacity-100');
+        }
+      });
+    }, 200);
+
   
     seccionActual = id;
   }

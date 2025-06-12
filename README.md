@@ -1,3 +1,3 @@
 Replicando:
 
-- https://webflow.com/made-in-webflow/website/webflow-scroll-snap
+https://kuon-yagi-portfolio.netlify.app/#top

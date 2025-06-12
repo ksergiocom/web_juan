@@ -6,9 +6,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Yoan</title>
 </head>
-<body class="bg-gray-500 h-full flex flex-col">
-    <header class="top-0 w-full text-white">
-        <div class="flex justify-between items-center absolute top-0 left-0 z-20 w-full p-5">
+<body class="bg-gray-600 bg-blend-soft-light bg-[url(/imgs/bg.jpg)] bg-center bg-cover backdrop-blur-xs h-full flex flex-col">
+    <header class="w-full text-white">
+        <div class="flex justify-between items-center relative top-0 left-0 z-20 w-full p-5">
             <h3>Yoan</h3>
             <button id="menu-btn" class=" flex flex-col gap-3">
                 <span id="menu-btn_bar1" class="block w-6 h-1 bg-white transition-transform duration-300 origin-center rounded-sm"></span>
@@ -18,39 +18,40 @@
         <!-- Menu -->
         <div id="menu-dropdown" class="bg-linear-to-l from-violet-500 to-fuchsia-500 absolute left-0 min-h-screen min-w-screen top-0 grid items-center justify-center transition duration-500 ease-in-out -translate-y-full z-10">
             <ul id="menu-dropdown_ul" class="flex flex-col gap-12">
-                <li class="overflow-hidden"><a id="menu-dropdown_nav1" class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Section1</a></li>
-                <li class="overflow-hidden"><a id="menu-dropdown_nav2" class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Section2</a></li>
-                <li class="overflow-hidden"><a id="menu-dropdown_nav3" class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Section3</a></li>
+                <li class="overflow-hidden"><a id="menu-dropdown_nav0" class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Section1</a></li>
+                <li class="overflow-hidden"><a id="menu-dropdown_nav1" class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Section2</a></li>
+                <li class="overflow-hidden"><a id="menu-dropdown_nav2" class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Section3</a></li>
             </ul>
         </div>
     </header>
     <main class="h-full p-5 flex flex-col items-center justify-center text-white">
-        <section id="main_section1" class="h-1/2 w-full">
-            <div class="bg-gray-700 h-full w-5/6 mx-auto relative">
-                <img class="absolute w-full h-full" src="./imgs/img1.jpg" alt="img1">
-                <h1 class="relative p-3 text-5xl text-white">Jigger</h1>
-            </div>
-            <div class="flex flex-col gap-2 -translate-y-25">
-                <h2 class="text-4xl font-bold">Viniste al <br>lugar correcto</h2>
-                <hr class="border-red-500 w-1/4">
-                <h3>Brunch & Pizza-Cocktail bar . <br> Sentirás la brisa del mar en cada sorbo.</h3>
-                <a class="bg-red-400 texto-white p-2 px-5 mt-5 rounded-4xl w-fit mx-auto">Ver menú</a>
-            </div>
-
+        <section id="main_section0" class="h-full w-full overflow-hidden flex flex-col transition translate-x-0">
+            <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">Viniste al</h2>
+            <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">lugar correcto</h2>
+            <hr class="w-1/4 transition mt-5 mb-2 duration-800 ease-in-out -translate-x-full">
+            <p class="text-2xl transition duration-800 ease-in-out -translate-x-full">Brunch & Pizza-Cocktail bar.</p>
+            <p class="text-2xl transition duration-800 ease-in-out -translate-x-full">Sentirás la brisa del mar en cada sorbo</p>
+            <a class="transition duration-800 ease-in-out -translate-x-full mt-5 bg-red-500 text-white  p-2 px-5 w-fit block" href="#">Ver menú</a>
         </section>
-        <section id="main_section2" class="hidden">
-            <h2>Section2</h2>
+        <section id="main_section1" class="h-full w-full overflow-hidden flex flex-col transition -translate-x-full">
+            <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">Section2</h2>
+            <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">lugar correcto</h2>
+            <hr class="w-1/4 transition mt-5 mb-2 duration-800 ease-in-out -translate-x-full">
+            <p class="text-2xl transition duration-800 ease-in-out -translate-x-full">Brunch & Pizza-Cocktail bar.</p>
+            <p class="text-2xl transition duration-800 ease-in-out -translate-x-full">Sentirás la brisa del mar en cada sorbo</p>
+            <a class="transition duration-800 ease-in-out -translate-x-full mt-5 bg-red-500 text-white  p-2 px-5 w-fit block" href="#">Ver menú</a>
         </section>
-        <section id="main_section3" class="hidden">
+        <section id="main_section2" class="h-full w-full overflow-hidden flex flex-col transition -translate-x-full">
             <h2>Section3</h2>
         </section>
     </main>
     <footer class="bottom-0 w-full">
         <div id="page-slide" class="flex gap-5 justify-center p-5 items-end">
-            <span id="page-slide_section1" class="w-1 h-6 bg-white block rounded-sm scale-y-150 transition duration-500 ease-in-out"></span>
+            <span id="page-slide_section0" class="w-1 h-6 bg-white block rounded-sm scale-y-150 transition duration-500 ease-in-out"></span>
+            <span id="page-slide_section1" class="w-1 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
             <span id="page-slide_section2" class="w-1 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
-            <span id="page-slide_section3" class="w-1 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
         </div>
+        <p class="text-white rotate-90 w-fit origin-bottom-right -translate-x-full p-1">Hacer scroll &rarr;</p>
     </footer>
     <script src="./script.js"></script>
 </body>

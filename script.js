@@ -1,4 +1,4 @@
-console.log("ksergio.com");
+console.log("www.ksergio.com");
 
 // Nagevacion e interactivos
 const menuBtn = document.getElementById('menu-btn'); 
@@ -10,16 +10,21 @@ const menuDropdownNav1 = document.getElementById('menu-dropdown_nav1');
 const menuDropdownNav2 = document.getElementById('menu-dropdown_nav2');
 const menuDropdownUl = document.getElementById("menu-dropdown_ul");
 const menuDropdownLis = menuDropdownUl.querySelectorAll("li");
+const footerMsg = document.getElementById('footer-msg');
 
 // Secciones
 const mainSection0 = document.getElementById("main_section0");
 const mainSection1 = document.getElementById("main_section1");
 const mainSection2 = document.getElementById("main_section2");
 
+const mainSections = [mainSection0, mainSection1, mainSection2]
+
 // PageSlider del footer
 const pageSlideSection0 = document.getElementById('page-slide_section0');
 const pageSlideSection1 = document.getElementById('page-slide_section1');
 const pageSlideSection2 = document.getElementById('page-slide_section2');
+
+const pageSliders = [pageSlideSection0, pageSlideSection1, pageSlideSection2]
 
 // Elementos de secciones
 // Seccion0
@@ -27,7 +32,8 @@ const mainSection0Img = document.getElementById('main_section0_img');
 const mainSection0ImgBg = document.getElementById('main_section0_img-bg');
 
 // Control de navegación
-let currentPage = 0;
+const TIMEOUT = 400;
+let currentPage = null;
 let menuIsOpen = false;
 
 /**
@@ -74,76 +80,90 @@ function  closeMenu() {
     },200);
 }
 
-// Show Pages ----------------------
+// Show Pages -----------------------------------------------------------------
 
-const showPage0 = () => {
-    // Ocultar y mostrar seccion
-    mainSection0.classList.remove("hidden")
-    mainSection1.classList.add("hidden")
-    mainSection2.classList.add("hidden")
+function showPage(pageIdx, down=false){
+    console.log('-------- Show Page --------')
+    console.log({pageIdx,currentPage})
 
-    // Slider que muestra la seccion actual
-    pageSlideSection0.classList.add("scale-y-150");
-    pageSlideSection1.classList.remove("scale-y-150");
-    pageSlideSection2.classList.remove("scale-y-150");
+
+
+    let timeoutCustom = TIMEOUT;
+
+    if(currentPage != null) {
+        hidePage(currentPage, down);
+    }else{
+        currentPage=0;
+        pageIdx=0;
+        timeoutCustom=100;
+    }
+
+    if(menuIsOpen){
+        closeMenu();
+    }
+
+    if(pageIdx!=0){
+        footerMsg.classList.add('translate-y-36')
+    }
+    else{
+        footerMsg.classList.remove('translate-y-36')
+    }
+
+    const section = mainSections[pageIdx];
+
+    pageSliders.forEach((slider, sliderIdx) => {
+        if(sliderIdx==pageIdx) {
+            slider.classList.add("scale-y-150");
+        }else{
+            slider.classList.remove("scale-y-150");
+        }
+    })
+
+    setTimeout(()=>{
+        section.classList.remove('hidden')
+        section.classList.remove('-translate-x-full')
+        const children = Array.from(section.children);
+    
+        children.forEach((child,childIdx) => {
+            setTimeout(() => {
+                child.classList.remove('-translate-x-full')
+            },100*(childIdx+1))
+        })
+    
 
     
-    // Ocultar el menuDropdown
-    if(menuIsOpen)closeMenu();    
-    currentPage = 0;
-
-    const hijos = Array.from(mainSection0.children)
-
-    hijos.forEach((el, idx) => {
-        setTimeout(() => {
-            el.classList.remove("-translate-x-full")
-        }, 1000+200*idx)
-    })
+    },timeoutCustom)
+    
+    currentPage=pageIdx
 
 }
 
-const hiddePage0 = () => {
-    mainSection0.classList.add('-tranlsate-y-full')
+function hidePage(pageIdx, down=false){
+    console.log('-------- hide Page --------')
+    console.log({pageIdx,currentPage})
 
-    const hijos = Array.from(mainSection0.children)
-
-    hijos.forEach((el) => {
-        el.classList.add("-translate-x-full")
-    })
+    // console.log({currentPage, pageIdx, down})
+    
+    const section = mainSections[pageIdx];
+    const children = Array.from(section.children);
+    if(down){
+        section.classList.add('-translate-y-full')
+    }else{
+        section.classList.add('translate-y-full')
+    }
+    setTimeout(()=>{
+        section.classList.add('hidden')
+        if(down){
+            section.classList.remove('-translate-y-full')
+        }else{
+            section.classList.remove('translate-y-full')
+        }
+        section.classList.add('-translate-x-full')
+        children.forEach((child) => {
+                child.classList.add('-translate-x-full')
+        })
+    },TIMEOUT)
 }
-
-const showPage1 = () => {
-    // Ocultar y mostrar seccion
-    mainSection0.classList.add("hidden")
-    mainSection1.classList.remove("hidden")
-    mainSection2.classList.add("hidden")
-
-    // Slider que muestra la seccion actual
-    pageSlideSection0.classList.remove("scale-y-150");
-    pageSlideSection1.classList.add("scale-y-150");
-    pageSlideSection2.classList.remove("scale-y-150");
-
-    // Ocultar el menuDropdown
-    if(menuIsOpen) closeMenu();
-    currentPage = 1;
-}
-
-const showPage2 = () => {
-    // Ocultar y mostrar seccion
-    mainSection0.classList.add("hidden")
-    mainSection1.classList.add("hidden")
-    mainSection2.classList.remove("hidden")
-
-    // Slider que muestra la seccion actual
-    pageSlideSection0.classList.remove("scale-y-150");
-    pageSlideSection1.classList.remove("scale-y-150");
-    pageSlideSection2.classList.add("scale-y-150");
-
-    // Ocultar el menuDropdown
-    if(menuIsOpen) closeMenu();
-    currentPage = 2;
-}
-
 
 /**
  * Events listeners -----------------------------------------------------------
@@ -157,14 +177,14 @@ menuBtn.addEventListener('click', () => {
     }
 })
 
-pageSlideSection0.addEventListener('click', showPage0)
-menuDropdownNav0.addEventListener('click', showPage0)
+pageSlideSection0.addEventListener('click', () => showPage(0))
+menuDropdownNav0.addEventListener('click', () => showPage(0))
 
-pageSlideSection1.addEventListener('click', showPage1)
-menuDropdownNav1.addEventListener('click', showPage1)
+pageSlideSection1.addEventListener('click', () => showPage(1))
+menuDropdownNav1.addEventListener('click', () => showPage(1))
 
-pageSlideSection2.addEventListener('click', showPage2)
-menuDropdownNav2.addEventListener('click', showPage2)
+pageSlideSection2.addEventListener('click', () => showPage(2))
+menuDropdownNav2.addEventListener('click', () => showPage(2))
 
 
 /**
@@ -172,20 +192,72 @@ menuDropdownNav2.addEventListener('click', showPage2)
  */
 // var scrollingDirection = 0; //idle
 var lastScroll = 9999;
-var scrollIdleTime = 300; // time interval that we consider a new scroll event
+var scrollIdleTime = TIMEOUT; // time interval that we consider a new scroll event
 
 window.addEventListener('wheel',wheel);
 
 function wheel(e){
+
+    if(menuIsOpen) return
+
     var delta = e.deltaY;
     var timeNow = performance.now();
     if (delta > 0 && ( timeNow > lastScroll + scrollIdleTime) ) {
-        console.log('scroll arriba')
+        if(currentPage>0)
+        showPage(currentPage-1,false);
+        console.log('-------- wheel Event --------')
+        console.log('arriba')
+        console.log({currentPage})
+
     } else if (delta < 0 && ( timeNow > lastScroll + scrollIdleTime)) {
-        console.log('scroll abajo')
+        console.log('-------- wheel Event --------')
+        console.log('abajo')
+        console.log({currentPage})
+
+        if(currentPage<2)
+        showPage(currentPage+1, true);
     }
     lastScroll = timeNow;
 }
 
 
-showPage0();
+
+/**
+ * Soporte para Touch ---------------------------------------------------------
+ */
+let touchStartY = null;
+
+window.addEventListener('touchstart', e => {
+    touchStartY = e.touches[0].clientY;
+});
+
+window.addEventListener('touchend', e => {
+    if(menuIsOpen) return
+
+    if (touchStartY === null) return;
+
+    const touchEndY = e.changedTouches[0].clientY;
+    const deltaY = touchStartY - touchEndY;
+    const timeNow = performance.now();
+
+    if (Math.abs(deltaY) > 50 && timeNow > lastScroll + scrollIdleTime) { // sensibilidad mínima
+        if (deltaY > 0 && currentPage < 2) {
+            // swipe hacia arriba
+            showPage(currentPage + 1, false);
+        } else if (deltaY < 0 && currentPage > 0) {
+            // swipe hacia abajo
+            showPage(currentPage - 1, true);
+        }
+
+        lastScroll = timeNow;
+    }
+
+    touchStartY = null;
+});
+
+
+/**
+ * Inicio ---------------------------------------------------------------------
+ */
+
+showPage(currentPage);

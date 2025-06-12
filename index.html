@@ -24,8 +24,8 @@
             </ul>
         </div>
     </header>
-    <main class="h-full p-5 flex flex-col items-center justify-center text-white">
-        <section id="main_section0" class="h-full w-full overflow-hidden flex flex-col transition translate-x-0">
+    <main class="h-fit m-5 py-5 relative items-center justify-center text-white block overflow-hidden">
+        <section id="main_section0" class="h-full w-full overflow-hidden flex flex-col duration-500 -translate-x-full hidden">
             <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">Viniste al</h2>
             <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">lugar correcto</h2>
             <hr class="w-1/4 transition mt-5 mb-2 duration-800 ease-in-out -translate-x-full">
@@ -33,7 +33,7 @@
             <p class="text-2xl transition duration-800 ease-in-out -translate-x-full">Sentirás la brisa del mar en cada sorbo</p>
             <a class="transition duration-800 ease-in-out -translate-x-full mt-5 bg-red-500 text-white  p-2 px-5 w-fit block" href="#">Ver menú</a>
         </section>
-        <section id="main_section1" class="h-full w-full overflow-hidden flex flex-col transition -translate-x-full">
+        <section id="main_section1" class="h-full w-full overflow-hidden flex flex-col duration-500 transition -translate-x-full- hidden">
             <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">Section2</h2>
             <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">lugar correcto</h2>
             <hr class="w-1/4 transition mt-5 mb-2 duration-800 ease-in-out -translate-x-full">
@@ -41,17 +41,20 @@
             <p class="text-2xl transition duration-800 ease-in-out -translate-x-full">Sentirás la brisa del mar en cada sorbo</p>
             <a class="transition duration-800 ease-in-out -translate-x-full mt-5 bg-red-500 text-white  p-2 px-5 w-fit block" href="#">Ver menú</a>
         </section>
-        <section id="main_section2" class="h-full w-full overflow-hidden flex flex-col transition -translate-x-full">
-            <h2>Section3</h2>
+        <section id="main_section2" class="h-full w-full overflow-hidden flex flex-col transition duration-500 -translate-x-full hidden">
+            <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">Section3</h2>
+            <p class="transition duration-800 ease-in-out -translate-x-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ea, obcaecati quidem exercitationem distinctio ullam excepturi consequuntur dicta similique natus ipsa, commodi cumque minus recusandae harum aliquam iusto debitis.</p>
+            <p class="transition duration-800 ease-in-out -translate-x-full">Consequuntur corrupti sint non? Repudiandae numquam consequuntur, ipsa quos facilis officiis quod quaerat quidem perferendis nostrum, quas voluptatibus voluptatem</p>
+            <p class="transition duration-800 ease-in-out -translate-x-full">Dolorum fuga expedita adipisci ullam. Necessitatibus dicta quibusdam impedit unde nobis temporibus harum ab repudiandae assumenda!</p>
         </section>
     </main>
-    <footer class="bottom-0 w-full">
+    <footer class="absolute bottom-0 w-full flex justify-center overflow-hidden">
+        <p id="footer-msg" class="text-white rotate-90 w-fit origin-bottom-right -translate-x-full p-1 absolute left-0 bottom-0 transition duration-500">Scroll &rarr;</p>
         <div id="page-slide" class="flex gap-5 justify-center p-5 items-end">
             <span id="page-slide_section0" class="w-1 h-6 bg-white block rounded-sm scale-y-150 transition duration-500 ease-in-out"></span>
             <span id="page-slide_section1" class="w-1 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
             <span id="page-slide_section2" class="w-1 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
         </div>
-        <p class="text-white rotate-90 w-fit origin-bottom-right -translate-x-full p-1">Hacer scroll &rarr;</p>
     </footer>
     <script src="./script.js"></script>
 </body>

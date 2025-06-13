@@ -6,7 +6,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Yoan</title>
 </head>
-<body class="bg-gray-600 bg-blend-soft-light bg-[url(/imgs/bg.jpg)] bg-center bg-cover backdrop-blur-xs h-full flex flex-col">
+<body class="bg-gray-900 h-full flex flex-col">
+    <video id="bg-video" class="blur-none absolute top-0 left-0 h-screen w-screen object-cover grayscale opacity-30" autoplay muted loop src="video/cocktail_resize.mp4"></video>
     <header class="w-full text-white">
         <div class="flex justify-between items-center relative top-0 left-0 z-20 w-full p-5">
             <h3>Yoan</h3>
@@ -16,7 +17,7 @@
             </button>
         </div>
         <!-- Menu -->
-        <div id="menu-dropdown" class="bg-linear-to-l from-violet-500 to-fuchsia-500 absolute left-0 min-h-screen min-w-screen top-0 grid items-center justify-center transition duration-500 ease-in-out -translate-y-full z-10">
+        <div id="menu-dropdown" class="bg-linear-to-l from-red-500 to-red-800 absolute left-0 min-h-screen min-w-screen top-0 grid items-center justify-center transition duration-500 ease-in-out -translate-y-full z-10">
             <ul id="menu-dropdown_ul" class="flex flex-col gap-12">
                 <li class="overflow-hidden"><a id="menu-dropdown_nav0" class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Section1</a></li>
                 <li class="overflow-hidden"><a id="menu-dropdown_nav1" class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Section2</a></li>
@@ -25,28 +26,37 @@
         </div>
     </header>
     <main class="h-fit m-5 py-5 relative items-center justify-center text-white block overflow-hidden">
-        <section id="main_section0" class="h-full w-full overflow-hidden flex flex-col duration-500 -translate-x-full hidden">
-            <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">Viniste al</h2>
-            <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">lugar correcto</h2>
-            <hr class="w-1/4 transition mt-5 mb-2 duration-800 ease-in-out -translate-x-full">
-            <p class="text-2xl transition duration-800 ease-in-out -translate-x-full">Brunch & Pizza-Cocktail bar.</p>
-            <p class="text-2xl transition duration-800 ease-in-out -translate-x-full">Sentirás la brisa del mar en cada sorbo</p>
-            <a class="transition duration-800 ease-in-out -translate-x-full mt-5 bg-red-500 text-white  p-2 px-5 w-fit block" href="#">Ver menú</a>
+        <section id="main_section0" class="h-full w-full overflow-hidden flex flex-col duration-400 -translate-x-full hidden">
+                <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">Viniste al</h2>
+                <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">lugar correcto</h2>
+                <hr class="w-1/4 transition mt-5 mb-2 duration-300 ease-in-out -translate-x-full">
+                <p class="text-2xl transition duration-300 ease-in-out -translate-x-full">Brunch & Pizza-Cocktail bar.</p>
+                <p class="text-2xl transition duration-300 ease-in-out -translate-x-full">Sentirás la brisa del mar en cada sorbo</p>
         </section>
-        <section id="main_section1" class="h-full w-full overflow-hidden flex flex-col duration-500 transition -translate-x-full- hidden">
-            <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">Section2</h2>
-            <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">lugar correcto</h2>
-            <hr class="w-1/4 transition mt-5 mb-2 duration-800 ease-in-out -translate-x-full">
-            <p class="text-2xl transition duration-800 ease-in-out -translate-x-full">Brunch & Pizza-Cocktail bar.</p>
-            <p class="text-2xl transition duration-800 ease-in-out -translate-x-full">Sentirás la brisa del mar en cada sorbo</p>
-            <a class="transition duration-800 ease-in-out -translate-x-full mt-5 bg-red-500 text-white  p-2 px-5 w-fit block" href="#">Ver menú</a>
+        <section id="main_section1" class="h-full w-full overflow-hidden flex flex-col duration-400 transition -translate-x-full- hidden">
+            <div class="bg-gray-900 h-2/4 w-full block transition duration-300 ease-in-out -translate-x-full scale-90">
+                    <!-- <video src="/video/chispas_resize.mp4" autoplay muted loop class="h-full transition duration-300 ease-in-out -translate-x-full object-cover w-full opacity-70"> -->
+                    <img src="imgs/img2.jpg" alt="img1" class="h-full transition duration-300 ease-in-out -translate-x-full object-cover w-full opacity-70">
+            </div>
+            <div class="-translate-y-14">
+                <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">Deja  lo</h2>
+                <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">cotidiano</h2>
+                <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">atrás</h2>
+                <hr class="w-1/4 transition mt-5 mb-2 duration-300 ease-in-out -translate-x-full">
+                <p class="text-2xl transition duration-300 ease-in-out -translate-x-full">Sumérgete en la experiencia Jigger</p>
+                <a class="transition duration-300 ease-in-out -translate-x-full mt-5 bg-gray-100 text-gray-900  p-2 px-5 w-fit block" href="#">Ver menú</a>
+            </div>
         </section>
-        <section id="main_section2" class="h-full w-full overflow-hidden flex flex-col transition duration-500 -translate-x-full hidden">
-            <h2 class="text-4xl transition duration-800 ease-in-out -translate-x-full">Section3</h2>
-            <p class="transition duration-800 ease-in-out -translate-x-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ea, obcaecati quidem exercitationem distinctio ullam excepturi consequuntur dicta similique natus ipsa, commodi cumque minus recusandae harum aliquam iusto debitis.</p>
-            <p class="transition duration-800 ease-in-out -translate-x-full">Consequuntur corrupti sint non? Repudiandae numquam consequuntur, ipsa quos facilis officiis quod quaerat quidem perferendis nostrum, quas voluptatibus voluptatem</p>
-            <p class="transition duration-800 ease-in-out -translate-x-full">Dolorum fuga expedita adipisci ullam. Necessitatibus dicta quibusdam impedit unde nobis temporibus harum ab repudiandae assumenda!</p>
-        </section>
+        <section id="main_section2" class="h-full w-full overflow-hidden flex flex-col transition duration-400 -translate-x-full hidden">
+            <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">¿Brunch?</h2>
+            <p class="transition duration-300 ease-in-out -translate-x-full">Este verano, despierta con el mar
+como compañia y disfruta de un
+brunch único frente a la costa del
+mediterráneo. Siente la brisa
+mientras saboreas cada bocado y
+haz de cada mañana un momento
+inolvidable.</p>
+           </section>
     </main>
     <footer class="absolute bottom-0 w-full flex justify-center overflow-hidden">
         <p id="footer-msg" class="text-white rotate-90 w-fit origin-bottom-right -translate-x-full p-1 absolute left-0 bottom-0 transition duration-500">Scroll &rarr;</p>

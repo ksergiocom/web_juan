@@ -11,6 +11,7 @@ const menuDropdownNav2 = document.getElementById('menu-dropdown_nav2');
 const menuDropdownUl = document.getElementById("menu-dropdown_ul");
 const menuDropdownLis = menuDropdownUl.querySelectorAll("li");
 const footerMsg = document.getElementById('footer-msg');
+const bgVideo = document.getElementById('bg-video');
 
 // Secciones
 const mainSection0 = document.getElementById("main_section0");
@@ -32,7 +33,7 @@ const mainSection0Img = document.getElementById('main_section0_img');
 const mainSection0ImgBg = document.getElementById('main_section0_img-bg');
 
 // Control de navegación
-const TIMEOUT = 400;
+const TIMEOUT = 500;
 let currentPage = null;
 let menuIsOpen = false;
 
@@ -104,9 +105,13 @@ function showPage(pageIdx, down=false){
 
     if(pageIdx!=0){
         footerMsg.classList.add('translate-y-36')
+        bgVideo.style.filter='blur(5px) grayscale(100%)';
+        bgVideo.style.transition=".8s filter ease-in-out"
     }
     else{
         footerMsg.classList.remove('translate-y-36')
+        bgVideo.style.filter='blur(0px) grayscale(100%)';
+        bgVideo.style.transition=".8s filter ease-in-out"
     }
 
     const section = mainSections[pageIdx];
@@ -122,15 +127,23 @@ function showPage(pageIdx, down=false){
     setTimeout(()=>{
         section.classList.remove('hidden')
         section.classList.remove('-translate-x-full')
-        const children = Array.from(section.children);
-    
-        children.forEach((child,childIdx) => {
-            setTimeout(() => {
-                child.classList.remove('-translate-x-full')
-            },100*(childIdx+1))
-        })
-    
+        let delay = 50;
+        
+        function showChildrenRecursive(elements) {
+            elements.forEach(el => {
+                setTimeout(() => {
+                    el.classList.remove('-translate-x-full');
+                }, delay);
+                delay += 50;
 
+                // Repetimos para los hijos del elemento actual
+                if (el.children.length > 0) {
+                    showChildrenRecursive(Array.from(el.children));
+                }
+            });
+        }
+    
+        showChildrenRecursive(Array.from(section.children));
     
     },timeoutCustom)
     
@@ -138,31 +151,45 @@ function showPage(pageIdx, down=false){
 
 }
 
-function hidePage(pageIdx, down=false){
+function hidePage(pageIdx, down = false) {
     console.log('-------- hide Page --------')
-    console.log({pageIdx,currentPage})
+    console.log({ pageIdx, currentPage });
 
-    // console.log({currentPage, pageIdx, down})
-    
     const section = mainSections[pageIdx];
-    const children = Array.from(section.children);
-    if(down){
-        section.classList.add('-translate-y-full')
-    }else{
-        section.classList.add('translate-y-full')
+    let delay = 100;
+
+    function hideChildrenRecursive(elements) {
+        elements.forEach(el => {
+            setTimeout(() => {
+                el.classList.add('-translate-x-full');
+            }, delay);
+            // delay += 100;
+
+            if (el.children.length > 0) {
+                hideChildrenRecursive(Array.from(el.children));
+            }
+        });
     }
-    setTimeout(()=>{
-        section.classList.add('hidden')
-        if(down){
-            section.classList.remove('-translate-y-full')
-        }else{
-            section.classList.remove('translate-y-full')
+
+    hideChildrenRecursive(Array.from(section.children));
+
+    // Desplazamiento vertical del contenedor principal
+    if (down) {
+        section.classList.add('-translate-y-full');
+    } else {
+        section.classList.add('translate-y-full');
+    }
+
+    // Ocultar completamente la sección tras la animación
+    setTimeout(() => {
+        section.classList.add('hidden');
+        if (down) {
+            section.classList.remove('-translate-y-full');
+        } else {
+            section.classList.remove('translate-y-full');
         }
-        section.classList.add('-translate-x-full')
-        children.forEach((child) => {
-                child.classList.add('-translate-x-full')
-        })
-    },TIMEOUT)
+        section.classList.add('-translate-x-full');
+    }, TIMEOUT); // Espera a que termine la animación recursiva
 }
 
 /**

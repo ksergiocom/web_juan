@@ -17,15 +17,30 @@ const bgVideo = document.getElementById('bg-video');
 const mainSection0 = document.getElementById("main_section0");
 const mainSection1 = document.getElementById("main_section1");
 const mainSection2 = document.getElementById("main_section2");
+const mainSection3 = document.getElementById("main_section3");
+const mainSection4 = document.getElementById("main_section4");
+const mainSection5 = document.getElementById("main_section5");
+const mainSection6 = document.getElementById("main_section6");
+const mainSection7 = document.getElementById("main_section7");
+const mainSection8 = document.getElementById("main_section8");
+const mainSection9 = document.getElementById("main_section9");
 
-const mainSections = [mainSection0, mainSection1, mainSection2]
+
+const mainSections = [mainSection0, mainSection1, mainSection2, mainSection3, mainSection4, mainSection5, mainSection6, mainSection7, mainSection8, mainSection9]
 
 // PageSlider del footer
 const pageSlideSection0 = document.getElementById('page-slide_section0');
 const pageSlideSection1 = document.getElementById('page-slide_section1');
 const pageSlideSection2 = document.getElementById('page-slide_section2');
+const pageSlideSection3 = document.getElementById('page-slide_section3');
+const pageSlideSection4 = document.getElementById('page-slide_section4');
+const pageSlideSection5 = document.getElementById('page-slide_section5');
+const pageSlideSection6 = document.getElementById('page-slide_section6');
+const pageSlideSection7 = document.getElementById('page-slide_section7');
+const pageSlideSection8 = document.getElementById('page-slide_section8');
+const pageSlideSection9 = document.getElementById('page-slide_section9');
 
-const pageSliders = [pageSlideSection0, pageSlideSection1, pageSlideSection2]
+const pageSliders = [pageSlideSection0, pageSlideSection1, pageSlideSection2, pageSlideSection3, pageSlideSection4, pageSlideSection5, pageSlideSection6, pageSlideSection7, pageSlideSection8, pageSlideSection9]
 
 // Elementos de secciones
 // Seccion0
@@ -46,9 +61,9 @@ function  openMenu() {
 
     menuDropdown.classList.remove("-translate-y-full");
     menuBtnBar1.classList.add('rotate-45');
-    menuBtnBar1.classList.add('translate-y-[8px]');
+    menuBtnBar1.classList.add('translate-y-[6px]');
     menuBtnBar2.classList.add('-rotate-45');
-    menuBtnBar2.classList.add('-translate-y-[8px]');
+    menuBtnBar2.classList.add('-translate-y-[6px]');
     
     /**
      * La duración de desplegar el menu es de 500ms (HARDCODEADO en la clase).
@@ -66,9 +81,9 @@ function  closeMenu() {
 
     menuDropdown.classList.add("-translate-y-full");
     menuBtnBar1.classList.remove('rotate-45');
-    menuBtnBar1.classList.remove('translate-y-[8px]');
+    menuBtnBar1.classList.remove('translate-y-[6px]');
     menuBtnBar2.classList.remove('-rotate-45');
-    menuBtnBar2.classList.remove('-translate-y-[8px]');
+    menuBtnBar2.classList.remove('-translate-y-[6px]');
     
     /**
      * La duración de desplegar el menu es de 500ms (HARDCODEADO en la clase).
@@ -119,8 +134,12 @@ function showPage(pageIdx, down=false){
     pageSliders.forEach((slider, sliderIdx) => {
         if(sliderIdx==pageIdx) {
             slider.classList.add("scale-y-150");
+            slider.classList.remove("bg-white");
+            slider.classList.add("bg-lime-400");
         }else{
             slider.classList.remove("scale-y-150");
+            slider.classList.remove("bg-lime-400");
+            slider.classList.add("bg-white");
         }
     })
 
@@ -156,7 +175,7 @@ function hidePage(pageIdx, down = false) {
     console.log({ pageIdx, currentPage });
 
     const section = mainSections[pageIdx];
-    let delay = 100;
+    let delay = TIMEOUT;
 
     function hideChildrenRecursive(elements) {
         elements.forEach(el => {
@@ -204,21 +223,31 @@ menuBtn.addEventListener('click', () => {
     }
 })
 
-pageSlideSection0.addEventListener('click', () => showPage(0))
 menuDropdownNav0.addEventListener('click', () => showPage(0))
-
-pageSlideSection1.addEventListener('click', () => showPage(1))
 menuDropdownNav1.addEventListener('click', () => showPage(1))
+menuDropdownNav2.addEventListener('click', () => showPage(8))
 
+
+
+pageSlideSection0.addEventListener('click', () => showPage(0))
 pageSlideSection2.addEventListener('click', () => showPage(2))
-menuDropdownNav2.addEventListener('click', () => showPage(2))
+pageSlideSection1.addEventListener('click', () => showPage(1))
+pageSlideSection3.addEventListener('click', () => showPage(3))
+pageSlideSection4.addEventListener('click', () => showPage(4))
+pageSlideSection5.addEventListener('click', () => showPage(5))
+pageSlideSection6.addEventListener('click', () => showPage(6))
+pageSlideSection7.addEventListener('click', () => showPage(7))
+pageSlideSection8.addEventListener('click', () => showPage(8))
+pageSlideSection9.addEventListener('click', () => showPage(9))
+
+
 
 
 /**
  * Eventos Wheel y scroll (para manejar la pagina ) ---------------------------
  */
 // var scrollingDirection = 0; //idle
-var lastScroll = 9999;
+var lastScroll = TIMEOUT;
 var scrollIdleTime = TIMEOUT; // time interval that we consider a new scroll event
 
 window.addEventListener('wheel',wheel);
@@ -241,7 +270,7 @@ function wheel(e){
         console.log('abajo')
         console.log({currentPage})
 
-        if(currentPage<2)
+        if(currentPage<9)
         showPage(currentPage+1, true);
     }
     lastScroll = timeNow;
@@ -268,7 +297,7 @@ window.addEventListener('touchend', e => {
     const timeNow = performance.now();
 
     if (Math.abs(deltaY) > 50 && timeNow > lastScroll + scrollIdleTime) { // sensibilidad mínima
-        if (deltaY > 0 && currentPage < 2) {
+        if (deltaY > 0 && currentPage < 9) {
             // swipe hacia arriba
             showPage(currentPage + 1, false);
         } else if (deltaY < 0 && currentPage > 0) {

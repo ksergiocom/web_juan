@@ -2,7 +2,7 @@
 
 Creando una landing page mobile first que realiza toda la navegación mediante animaciones con transiciones y timemouts de JS.
 
-![preview](img/preview.png)
+![preview](imgs/preview.png)
 
 Está pendiente de agregar contenido, unificar el diseño, optimizar recursos, etc.
 

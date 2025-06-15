@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="min-h-dvh">
+<html lang="en" class="min-h-dvh w-screen">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     </style>
 </head>
 
-<body class="bg-gray-900 min-h-dvh flex flex-col justify-between">
+<body class="bg-gray-900 min-h-dvh flex flex-col justify-between w-screen">
     <video id="bg-video" class="blur-none fixed top-0 left-0 h-dvh w-screen object-cover grayscale opacity-30" autoplay
         muted playsinline loop src="video/cocktail_resize.mp4" type="video/mp4"></video>
     <header class="w-full h-fit text-white flex sticky top-0 z-20 transition-colors duration-500 backdrop-blur-none">
@@ -50,66 +50,92 @@
     </header>
     <div class="flex-1 flex flex-col relative">
         <div class="flex flex-col flex-1">
-            <main class="flex-1 mx-5 xl:mx-8 xl:mb-10 relative items-center justify-center text-white flex overflow-hidden items-center z-0">
+            <main
+                class="flex-1 mx-5 xl:mx-8 xl:mb-10 relative items-center justify-center text-white flex overflow-hidden items-center z-0">
                 <section id="main_section0"
                     class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 translate-x-[-100vw] hidden">
                     <div class="flex gap-3 transition duration-300 ease-in-out translate-x-[-100vw]">
                         <!-- <img class="h-20 z-10 rounded-full p-2 bg-white transition duration-300 ease-in-out translate-x-[-100vw]" src="imgs/logo.png" alt="logo"> -->
                         <div class="transition duration-300 ease-in-out translate-x-[-100vw]">
-                            <h2 class="text-4xl xl:text-8xl transition duration-300 ease-in-out translate-x-[-100vw]">Viniste al</h2>
-                            <h2 class="text-4xl xl:text-8xl transition duration-300 ease-in-out translate-x-[-100vw]">lugar <span
-                                    class="text-lime-400 font-bold">correcto</span></h2>
+                            <h2 class="text-4xl xl:text-8xl transition duration-300 ease-in-out translate-x-[-100vw]">
+                                Viniste al</h2>
+                            <h2 class="text-4xl xl:text-8xl transition duration-300 ease-in-out translate-x-[-100vw]">
+                                lugar <span class="text-lime-400 font-bold">correcto</span></h2>
                         </div>
                     </div>
                     <!-- <hr class="w-1/4 transition mt-5 mb-2 duration-300 ease-in-out translate-x-[-100vw]"> -->
                     <div class="text-right overflow-hidden transition duration-300 ease-in-out translate-x-[-100vw]">
-                        <a id="main_section0-btn"
-                            class="ml-auto transition duration-300 ease-in-out translate-x-[-100vw] mb-5 xl:mb-5 bg-transparent border-1 text-white p-2 xl:p-2 px-5 xl:px-7 xl:text-lg w-fit block"
-                            href="#">Ver carta</a>
+                        <a id="main_section0-btn" href="#"
+                            class="group relative overflow-hidden ml-auto mb-5 xl:mb-5 w-fit block px-5 xl:px-7 py-2 xl:py-2 border border-white text-white text-base xl:text-lg transition duration-200 ease-in-out">
+
+                            <span
+                                class="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0"></span>
+
+                            <span class="relative z-10 transition-colors duration-300 group-hover:text-black">
+                                Ver carta
+                            </span>
+                        </a>
+
                         <p class="text-2xl xl:text-6xl transition duration-300 ease-in-out translate-x-[-100vw]"><span
                                 class="text-lime-400 font-bold">Brunch</span> & <span
                                 class="text-lime-400 font-bold">Pizza-Cocktail</span> bar</p>
-                        <p class="text-2xl xl:text-6xl transition duration-300 ease-in-out translate-x-[-100vw]">Sentirás la brisa del mar
+                        <p class="text-2xl xl:text-6xl transition duration-300 ease-in-out translate-x-[-100vw]">
+                            Sentirás la brisa del mar
                             en
                             cada sorbo</p>
                     </div>
                 </section>
                 <section id="main_section1"
                     class="absolute inset-0 flex-1 w-full xl:w-1/2 xl:mx-auto overflow-hidden flex flex-col justify-between duration-400 translate-x-[-100vw] hidden items-center justify-center">
-                    <div class="flex flex-col absolute h-full w-full transition duration-300 ease-in-out translate-x-[-100vw]">
+                    <div
+                        class="flex flex-col absolute h-full w-full transition duration-300 ease-in-out translate-x-[-100vw]">
                         <div
                             class="transition duration-300 ease-in-out translate-x-[-100vw] bg-black h-1/2 translate-y-7 xl:translate-y-24 translate-x-5 xl:translate-x-24">
-                            <img class="h-full w-full opacity-20 grayscale object-center object-cover " src="/imgs/img1.jpg"
-                                alt="img1">
+                            <img class="h-full w-full opacity-20 grayscale object-center object-cover "
+                                src="/imgs/img1.jpg" alt="img1">
                         </div>
                         <div
                             class="transition duration-300 ease-in-out translate-x-[-100vw] bg-black h-1/2 -translate-y-7 xl:-translate-y-24 -translate-x-5 xl:-translate-x-24">
-                            <img class="h-full w-full opacity-20 grayscale object-center object-cover " src="/imgs/img2.jpg"
-                                alt="img2">
+                            <img class="h-full w-full opacity-20 grayscale object-center object-cover "
+                                src="/imgs/img2.jpg" alt="img2">
                         </div>
                     </div>
                     <div
                         class="z-10 flex flex-col w-2/3 mx-auto text-center gap-3 xl:gap-5 transition duration-300 ease-in-out translate-x-[-100vw] overflow-hidden justify-center items-center">
                         <h2 class="text-4xl xl:text-6xl transition duration-300 ease-in-out translate-x-[-100vw]">¡<span
                                 class="text-lime-400 font-bold">Vive</span> la experiencia!</h2>
-                        <h3 class="text-md xl:text-2xl transition duration-300 ease-in-out translate-x-[-100vw]">Crea nuevos recuerdos este
+                        <h3 class="text-md xl:text-2xl transition duration-300 ease-in-out translate-x-[-100vw]">Crea
+                            nuevos recuerdos este
                             verano en <strong>JIGGER</strong> </h3>
-                        <p class="transition xl:text-xl duration-300 ease-in-out translate-x-[-100vw]">Haz ya tu pedido o reserva una mesa
+                        <p class="transition xl:text-xl duration-300 ease-in-out translate-x-[-100vw]">Haz ya tu pedido
+                            o reserva una mesa
                             en
                             <strong><a class="text-lime-400 hover:text-lime-600" href="tel:+34 623.911.195">+34
                                     623.911.195</a></strong>
                         </p>
-                        <a class="mt-7 transition duration-300 ease-in-out translate-x-[-100vw] mb-5 xl:mb-5 bg-transparent border-1 text-white p-2 xl:p-2 px-5 xl:px-7 xl:text-lg w-fit block"
-                            id="btn-contactanos" href="#">Contáctanos</a>
+                        <a id="btn-contactanos" href="#"
+                            class="group relative overflow-hidden ml-auto mt-7 mb-5 xl:mb-5 w-fit block px-5 xl:px-7 py-2 xl:py-2 border border-white text-white text-base xl:text-lg transition duration-200 ease-in-out">
+
+                            <!-- Fondo blanco animado -->
+                            <span
+                                class="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-200 ease-in-out z-0"></span>
+
+                            <!-- Texto encima del fondo -->
+                            <span class="relative z-10 transition-colors duration-300 group-hover:text-black">
+                                Contáctanos
+                            </span>
+                        </a>
+
                     </div>
                 </section>
                 <section id="main_section2"
                     class=" absolute inset-0 h-full w-full xl:w-1/3 xl:mx-auto xl:justify-center overflow-hidden flex flex-col duration-400 translate-x-[-100vw] hidden">
-                    <h2 class="mb-3 transition duration-300 ease-in-out translate-x-[-100vw] text-4xl">¿<span
-                            class="text-lime-400 font-bold">”Good Morning”</span> sin café? <span class="text-2xl">No es
+                    <h2 class="mb-3 transition duration-300 ease-in-out translate-x-[-100vw] text-4xl xl:text-6xl">
+                        ¿<span class="text-lime-400 font-bold">”Good Morning”</span> sin café? <span
+                            class="text-2xl xl:text-4xl">No es
                             posible</span></h2>
-                    <p class=" transition duration-300 ease-in-out translate-x-[-100vw] mb-5">¡Despierta con <span
-                            class="text-lime-400 font-semibold">energía</span>! Siente el
+                    <p class=" transition duration-300 xl:text-xl ease-in-out translate-x-[-100vw] mb-5">¡Despierta con
+                        <span class="text-lime-400 font-semibold">energía</span>! Siente el
                         sabor vibrante, el
                         amanecer, el sol en cada taza y
                         convierte tu día en una <span class="text-lime-400 font-semibold">experiencia</span>
@@ -122,9 +148,9 @@
                     <video
                         class="w-full h-1/2 w-full transition duration-300 ease-in-out translate-x-[-100vw] object-center object-cover"
                         autoplay loop muted playsinline src="video/cocktail_resize.mp4" type="video/mp4"></video>
-                    <h2 class="mt-7 transition duration-300 ease-in-out translate-x-[-100vw] text-4xl"><span
+                    <h2 class="mt-7 transition duration-300 ease-in-out translate-x-[-100vw] text-4xl xl:text-6xl"><span
                             class="text-lime-400 font-semibold">Sabor</span> sin resaca</h2>
-                    <p class=" mt-3 transition duration-300 ease-in-out translate-x-[-100vw]"><span
+                    <p class=" mt-3 transition duration-300 ease-in-out translate-x-[-100vw] xl:text-xl"><span
                             class="text-lime-400 font-semibold">Vive</span> la fiesta sin límites.
                         Con nuestras bebidas sin alcohol
                         harás que las vacaciones sean
@@ -133,16 +159,17 @@
                 </section>
                 <section id="main_section4"
                     class="absolute inset-0 h-full w-full xl:w-1/3 xl:mx-auto xl:justify-center overflow-hidden flex flex-col gap-3 duration-400 translate-x-[-100vw] hidden">
-                    <h2 class=" transition duration-300 ease-in-out translate-x-[-100vw] text-4xl">¡Para <span
-                            class="text-lime-400 font-semibold">flipar</span>!</h2>
-                    <p class=" transition duration-300 ease-in-out translate-x-[-100vw] mb-5">Te apetece un cocktail?
-        
+                    <h2 class=" transition duration-300 ease-in-out translate-x-[-100vw] text-4xl xl:text-6xl">¡Para
+                        <span class="text-lime-400 font-semibold">flipar</span>!</h2>
+                    <p class=" transition duration-300 ease-in-out translate-x-[-100vw] mb-5 xl:text-xl">Te apetece un
+                        cocktail?
+
                         Déjalo en nuestras manos.
-        
+
                         Los chicos de <span class="text-lime-400 font-semibold">Jigger</span> saben lo que se
                         hacen y pasando cinco minutos con
                         ellos entenderás porqué.
-        
+
                         ¿Te animas?</p>
                     <img class="w-full h-1/2  transition duration-300 ease-in-out translate-x-[-100vw] object-center object-cover"
                         src="imgs/flipar.jpg" alt="flipar">
@@ -152,10 +179,11 @@
                     <video
                         class="w-full mb-2 h-1/2 w-full transition duration-300 ease-in-out translate-x-[-100vw] object-center object-cover"
                         autoplay loop muted playsinline src="video/pizza.mp4" type="video/mp4"></video>
-                    <h2 class=" transition duration-300 ease-in-out translate-x-[-100vw] text-4xl"><span
+                    <h2 class=" transition duration-300 ease-in-out translate-x-[-100vw] text-4xl xl:text-6xl"><span
                             class="text-lime-400 font-semibold">Pizza</span> o <span
                             class="text-lime-400 font-semibold">Focaccia</span></h2>
-                    <p class=" transition duration-300 ease-in-out translate-x-[-100vw]">Pizzas perfectas y focaccias suaves y
+                    <p class=" transition duration-300 ease-in-out translate-x-[-100vw] xl:text-xl">Pizzas perfectas y
+                        focaccias suaves y
                         crujientes, hechas con los mejores
                         inglimeientes frescos. El lugar <span class="text-lime-400 font-semibold">ideal</span> si
                         quieres disfrutar del auténtico sabor
@@ -163,9 +191,10 @@
                 </section>
                 <section id="main_section6"
                     class="absolute inset-0 h-full w-full xl:w-1/3 xl:mx-auto xl:justify-center overflow-hidden flex flex-col gap-3 duration-400 translate-x-[-100vw] hidden">
-                    <h2 class=" transition duration-300 ease-in-out translate-x-[-100vw] text-4xl">¿Algo <span
-                            class="text-lime-400 font-semibold">dulce</span>?</h2>
-                    <p class=" transition duration-300 ease-in-out translate-x-[-100vw] mb-5">“Endulza tu día con nuestros
+                    <h2 class=" transition duration-300 ease-in-out translate-x-[-100vw] text-4xl xl:text-6xl">¿Algo
+                        <span class="text-lime-400 font-semibold">dulce</span>?</h2>
+                    <p class=" transition duration-300 ease-in-out translate-x-[-100vw] mb-5 xl:text-xl">“Endulza tu día
+                        con nuestros
                         irresistibles postres, hechos con
                         amor y los mejores inglimeientes
                         para que cada bocado sea una
@@ -179,27 +208,28 @@
                     <video
                         class="w-full h-1/2 w-full transition duration-300 ease-in-out mb-3 translate-x-[-100vw] object-center object-cover"
                         autoplay loop muted playsinline src="video/hooka.mp4" type="video/mp4"></video>
-                    <h2 class=" transition duration-300 ease-in-out translate-x-[-100vw] text-4xl"><span
+                    <h2 class=" transition duration-300 ease-in-out translate-x-[-100vw] text-4xl xl:text-6xl"><span
                             class="text-lime-400 font-semibold">HOOKAH</span></h2>
-                    <p class=" transition duration-300 ease-in-out translate-x-[-100vw]">Eleva tu experiencia con nuestras
+                    <p class=" transition duration-300 ease-in-out translate-x-[-100vw] xl:text-xl">Eleva tu experiencia
+                        con nuestras
                         <span class="text-lime-400 font-semibold">SHISHAS</span>, una forma única de
                         compartir y disfrutar de la noche
                         con tus amigos.
-        
+
                         “Sumérgete en una experiencia
                         sensorial <span class="text-lime-400 font-semibold">sin igual</span>”
                     </p>
                 </section>
                 <section id="main_section8"
-                    class="absolute inset-0 h-full w-full xl:w-1/3 xl:mx-auto xl:justify-center overflow-hidden gap-1 flex flex-col items-center transition duration-400 translate-x-[-100vw] hidden">
-        
+                    class="absolute inset-0 h-full w-full xl:w-1/3 xl:mx-auto xl:justify-center overflow-hidden gap-1 flex flex-col items-center transition duration-400 translate-x-[-100vw] hidden xl:text-lg">
+
                     <!-- Imagen decorativa centrada -->
                     <div
                         class="mb-5 bg-white items-center w-fit rounded-full h-1/3 inset-0 flex items-center justify-center transition duration-300 ease-in-out translate-x-[-100vw]">
                         <img class="m-auto h-full object-contain transition duration-300 ease-in-out translate-x-[-100vw]"
                             src="imgs/logo.png" alt="logo" />
                     </div>
-        
+
                     <!-- <h3 class="text-3xl transition duration-300 ease-in-out translate-x-[-100vw]">Disfruta con nosotros
                                 </h3> -->
                     <p class=" transition duration-300 ease-in-out translate-x-[-100vw]">C/ passatge baladre 49 , Cala
@@ -209,672 +239,702 @@
                     <p class=" transition duration-300 ease-in-out translate-x-[-100vw]">telf: +34 623.911.195</p>
                     <a class=" transition duration-300 ease-in-out translate-x-[-100vw]"
                         href="mailto:jiggercookingcocktail@gmail.com">jiggercookingcocktail@gmail.com</a>
-                    <hr class="my-3 w-full border-white transition duration-300 ease-in-out translate-x-[-100vw]">
-        
+                    <hr
+                        class="w-1/2 mx-auto my-3 border-white transition duration-300 ease-in-out translate-x-[-100vw]">
+
                     <p class=" transition duration-300 ease-in-out translate-x-[-100vw]">De lunes a domingo:</p>
                     <p class=" transition duration-300 ease-in-out translate-x-[-100vw]">(09.00h a 13.00h / 18.00h a
                         03.00h)</p>
                     <p class=" transition duration-300 ease-in-out translate-x-[-100vw]">Miércoles
                         <strong>cerrado</strong>
                     </p>
-        
-                    <a id="main_section8-btn"
-                        class="mt-5 transition duration-300 ease-in-out translate-x-[-100vw] mb-5 bg-transparent border-1 p-2 px-5 w-fit block"
-                        href="#">Saber más</a>
-        
+
+                    <a id="main_section8-btn" href="#"
+                        class="group relative overflow-hidden mt-5 mb-5 w-fit block px-5 py-2 border border-white text-white text-base transition duration-200 ease-in-out">
+
+                        <!-- Fondo animado -->
+                        <span
+                            class="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-200 ease-in-out z-0"></span>
+
+                        <!-- Texto -->
+                        <span class="relative z-10 transition-colors duration-300 group-hover:text-black">
+                            Saber más
+                        </span>
+                    </a>
+
+
                 </section>
             </main>
-            <aside id="aside-carta" class="h-full hidden text-white flex flex-col gap-5 z-10 px-5 pb-7">
+            <aside id="aside-carta" class="h-full w-full hidden text-white flex flex-col gap-5 z-10 px-5 pb-7 xl:px-7">
                 <a class="text-lime-400 hover:text-lime-600" id="aside_volver-btn" href="#">&larr; volver</a>
-                <div class="flex flex-col gap-15">
-        
-        
-                    <section>
-                        <h2>Sandwiches</h2>
-                        <ul>
-                            <li>
-                                <h3>PASTRAMI <span>€ 12,00</span></h3>
-                                <p>Pastrami, salsa de mostaza, queso suizo y pepinillos.</p>
-                            </li>
-                            <li>
-                                <h3>MORTADELLA <span>€ 11,50</span></h3>
-                                <p>Mortadella italiana, mozzarella fresca y crema de pistachos.</p>
-                            </li>
-                            <li>
-                                <h3>SOBRASADA <span>€ 10,50</span></h3>
-                                <p>Sobrasada de Menorca al horno, queso de maó semicurado y miel.</p>
-                            </li>
-                            <li>
-                                <h3>POLLO <span>€ 12,00</span></h3>
-                                <p>Contramuslo de pollo al horno, salsa pesto y parmesano.</p>
-                            </li>
-                        </ul>
+                <div>
+
+
+                    <div class="columns-1 sm:columns-2 lg:columns-3 gap-17 space-y-17 xl:gap-24 xl:space-y-24">
+
+
+                        <section>
+                            <h2>Sandwiches</h2>
+                            <ul>
+                                <li>
+                                    <h3>PASTRAMI <span>€ 12,00</span></h3>
+                                    <p>Pastrami, salsa de mostaza, queso suizo y pepinillos.</p>
+                                </li>
+                                <li>
+                                    <h3>MORTADELLA <span>€ 11,50</span></h3>
+                                    <p>Mortadella italiana, mozzarella fresca y crema de pistachos.</p>
+                                </li>
+                                <li>
+                                    <h3>SOBRASADA <span>€ 10,50</span></h3>
+                                    <p>Sobrasada de Menorca al horno, queso de maó semicurado y miel.</p>
+                                </li>
+                                <li>
+                                    <h3>POLLO <span>€ 12,00</span></h3>
+                                    <p>Contramuslo de pollo al horno, salsa pesto y parmesano.</p>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2>Focaccia</h2>
+                            <ul>
+                                <li>
+                                    <h3>CESAR <span>€ 11,50</span></h3>
+                                    <p>Lechuga, croutons, pollo, salsa césar y parmesano rallado.</p>
+                                </li>
+                                <li>
+                                    <h3>CLÁSICA <span>€ 10,40</span></h3>
+                                    <p>Mezclum de lechugas, tomate, cebolla morada, zanahoria, semillas, olivas y
+                                        vinagreta de
+                                        balsámico.
+                                    </p>
+                                </li>
+                            </ul>
+                        </section>
+
+
+
+                        <section>
+                            <h2>Entrantes</h2>
+                            <ul>
+                                <li>
+                                    <h3>PROVOLONE <span>€ 12,20</span></h3>
+                                    <p>Provolone al horno con tomates secos y finas hierbas. Acompañado de nuestra
+                                        deliciosa
+                                        focaccia.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>PAPAS AL HORNO <span>€ 8,00</span></h3>
+                                    <p>Patatas parisien con salsa mayo trufa y queso parmesano rallado al momento.</p>
+                                </li>
+                                <li>
+                                    <h3>NACHOS <span>€ 15,00</span></h3>
+                                    <p>Mozzarella fundida, pico de gallo, guacamole y jalapeños.</p>
+                                </li>
+                            </ul>
+                        </section>
+
+
+
+                        <section>
+                            <h2>Pizza</h2>
+                            <ul>
+                                <li>
+                                    <h3>MARGARITA <span>€ 10,40</span></h3>
+                                    <p>Salsa de tomate, mozzarella y albahaca fresca.</p>
+                                </li>
+                                <li>
+                                    <h3>4 QUESOS <span>€ 12,10</span></h3>
+                                    <p>Salsa de tomate, mozzarella, gorgonzola, parmesano y cabra.</p>
+                                </li>
+                                <li>
+                                    <h3>PEPPERONI <span>€ 11,20</span></h3>
+                                    <p>Salsa de tomate, mozzarella, pepperoni.</p>
+                                </li>
+                                <li>
+                                    <h3>HAWAIANA <span>€ 12,00</span></h3>
+                                    <p>Salsa de tomate, mozzarella, jamón york y piña.</p>
+                                </li>
+                                <li>
+                                    <h3>YORK <span>€ 12,00</span></h3>
+                                    <p>Salsa de tomate, mozzarella, jamón york y champiñones.</p>
+                                </li>
+                                <li>
+                                    <h3>VEGETARIANA <span>€ 13,00</span></h3>
+                                    <p>Salsa de tomate, mozzarella, pimientos asados, cebolla, champiñones y aceituna
+                                        negra.</p>
+                                </li>
+                                <li>
+                                    <h3>TARTUFO <span>€ 14,20</span></h3>
+                                    <p>Salsa blanca, mozzarella, tartufo, panceta ahumada y parmesano.</p>
+                                </li>
+                                <li>
+                                    <h3>PERA <span>€ 12,80</span></h3>
+                                    <p>Salsa de tomate, mozzarella, gorgonzola, pera, nueces y miel.</p>
+                                </li>
+                                <li>
+                                    <h3>CALA BLANCA <span>€ 13,30</span></h3>
+                                    <p>Salsa de tomate, mozzarella, sobrasada, queso de maó y miel.</p>
+                                </li>
+                            </ul>
+                        </section>
+
+
+
+                        <section>
+                            <h2>Postres</h2>
+                            <ul>
+                                <li>
+                                    <h3>FINAL FELIZ <span>€ 11,50</span></h3>
+                                    <p>Nutella, plátano, nueces y salsa de frutos rojos para mojar.</p>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>Postres</h2>
+                            <ul>
+                                <li>
+                                    <h3>TARTA DE ZANAHORIA CASERA <span>€ 8,00</span></h3>
+                                    <p>Con helado de chocolate blanco.</p>
+                                </li>
+                                <li>
+                                    <h3>COULANT <span>€ 8,00</span></h3>
+                                    <p>Con helado de nata y galleta de mantequilla.</p>
+                                </li>
+                                <li>
+                                    <h3>TARTA DE QUESO CASERA <span>€ 8,00</span></h3>
+                                    <p>Con frutos rojos confitados.</p>
+                                </li>
+                            </ul>
+                        </section>
+
+
+
+                        <section>
+                            <h2>Cocktails clásicos</h2>
+                            <ul>
+                                <li>
+                                    <h3>BOULEVARDIER <span>€ 11,00</span></h3>
+                                    <p>Whiskey americano, vermut rojo, campari.</p>
+                                </li>
+                                <li>
+                                    <h3>MINT JULEP <span>€ 11,00</span></h3>
+                                    <p>Whiskey americano, sirope simple, zumo de lima y hierbabuena.</p>
+                                </li>
+                                <li>
+                                    <h3>OLD FASHION <span>€ 12,00</span></h3>
+                                    <p>Whisky americano, 1 azucarillo, bitter de angostura.</p>
+                                </li>
+                                <li>
+                                    <h3>PENICILLIN <span>€ 12,00</span></h3>
+                                    <p>Whisky escocés, zumo de limón, sirope de agave y jengibre fresco.</p>
+                                </li>
+                                <li>
+                                    <h3>ROB ROY <span>€ 11,00</span></h3>
+                                    <p>Whisky escocés, vermut rojo.</p>
+                                </li>
+                                <li>
+                                    <h3>PORNO STAR MARTINI <span>€ 12,00</span></h3>
+                                    <p>Vodka vainilla, licor de fruta de la pasión, puré de fruta de la pasión, zumo de
+                                        lima.
+                                        Chupito de
+                                        cava.</p>
+                                </li>
+                                <li>
+                                    <h3>MOSCOW MULE <span>€ 11,50</span></h3>
+                                    <p>Vodka, zumo de lima, jengibre fresco, ginger beer.</p>
+                                </li>
+                                <li>
+                                    <h3>EXPRESSO MARTINI <span>€ 11,50</span></h3>
+                                    <p>Vodka, café espresso, licor de café.</p>
+                                </li>
+                                <li>
+                                    <h3>BLOODY MARY <span>€ 12,00</span></h3>
+                                    <p>Vodka, zumo de tomate, salsa Perrins, salsa tabasco, zumo de limón, sal,
+                                        pimienta, apio.</p>
+                                </li>
+                                <li>
+                                    <h3>PINK LADY <span>€ 11,00</span></h3>
+                                    <p>Ginebra aromática, zumo de limón, sirope de maraschino, granadina.</p>
+                                </li>
+                                <li>
+                                    <h3>DAIQUIRÍ <span>€ 11,00</span></h3>
+                                    <p>Ron cubano, zumo de limón y sirope simple.</p>
+                                </li>
+                                <li>
+                                    <h3>MOJITO <span>€ 11,00</span></h3>
+                                    <p>Ron cubano, zumo de lima, sirope simple, hierbabuena y soda.</p>
+                                </li>
+                                <li>
+                                    <h3>PIÑA COLADA <span>€ 11,00</span></h3>
+                                    <p>Ron Blanco, leche de coco, piña natural. (Batidora)</p>
+                                </li>
+                                <li>
+                                    <h3>DARK AND STORMY <span>€ 11,50</span></h3>
+                                    <p>Ron especiado, ginger beer, zumo de lima.</p>
+                                </li>
+                                <li>
+                                    <h3>PALOMA <span>€ 11,50</span></h3>
+                                    <p>Tequila o Mezcal, zumo de lima, soda de pomelo, ribeteado con sal y polvo de
+                                        chile.</p>
+                                </li>
+                                <li>
+                                    <h3>NAKED AND FAMOUS <span>€ 12,00</span></h3>
+                                    <p>Mezcal, chartreuse amarillo, aperol, zumo de lima.</p>
+                                </li>
+                                <li>
+                                    <h3>MARGARITA <span>€ 11,00</span></h3>
+                                    <p>Tequila, triple seco, zumo de limón, ribete con sal.</p>
+                                </li>
+                                <li>
+                                    <h3>OAXACA FASHIONED <span>€ 11,50</span></h3>
+                                    <p>Mezcal, tequila añejo, jarabe de agave, bitter de angostura.</p>
+                                </li>
+                                <li>
+                                    <h3>CLOVER CLUB <span>€ 11,00</span></h3>
+                                    <p>Ginebra seca, 3 frambuesas frescas, zumo de limón, clara de huevo.</p>
+                                </li>
+                                <li>
+                                    <h3>LAST WORDS <span>€ 11,50</span></h3>
+                                    <p>Ginebra aromática, chartreuse verde, maraschino, zumo de lima.</p>
+                                </li>
+                                <li>
+                                    <h3>TOM COLLINS <span>€ 11,00</span></h3>
+                                    <p>Ginebra old tom, zumo de limón, soda, sirope simple.</p>
+                                </li>
+                                <li>
+                                    <h3>MAI TAI <span>€ 12,00</span></h3>
+                                    <p>Ron añejo, overproof, triple seco, zumo de lima, sirope de orgeat, granadina.</p>
+                                </li>
+                            </ul>
+                        </section>
+
+
+
+                        <section>
+                            <h2>Jigger Style</h2>
+                            <ul>
+                                <li>
+                                    <h3>IT (PAYASO) <span>€ 15,00</span></h3>
+                                    <p>Ron añejo Cubano infusionado en piña, limón y canela, zumo de limón, zumo de
+                                        piña, orgeat,
+                                        soda
+                                        de
+                                        cereza casera y algodón de azúcar.</p>
+                                </li>
+                                <li>
+                                    <h3>HELLRAISER <span>€ 15,00</span></h3>
+                                    <p>Gin aromático de fresa, puré de frambuesas, sirope de vainilla casero, zumo de
+                                        lima, bitter
+                                        de
+                                        angostura y cerveza de jengibre.</p>
+                                </li>
+                                <li>
+                                    <h3>CALABAZA <span>€ 14,50</span></h3>
+                                    <p>Whiskey de centeno, sirope de saúco, sirope de pomelo, campari, zumo de lima,
+                                        bitter de
+                                        naranja y
+                                        humo de cerezo.</p>
+                                </li>
+                                <li>
+                                    <h3>EL HUEVO DE IVÁN <span>€ 14,50</span></h3>
+                                    <p>Ron añejo Cubano infusionado en canela, vainilla y anís, zumo de limón, zumo de
+                                        piña, puré de
+                                        piña,
+                                        puré de mango y frutos rojos confitados.</p>
+                                </li>
+                                <li>
+                                    <h3>BÚHO OBSERVADOR <span>€ 14,25</span></h3>
+                                    <p>Ron Cubano macerado con granos de café, licor de plátano, zumo de piña, nata,
+                                        sirope de
+                                        azúcar
+                                        moreno
+                                        y bitter de cacao.</p>
+                                </li>
+                                <li>
+                                    <h3>BARRIGUITAS <span>€ 15,00</span></h3>
+                                    <p>Whisky escocés, té negro con cardamomo, zumo de lima, puré de fruta de la pasión,
+                                        sirope de
+                                        vainilla
+                                        casero y espuma de fruta de la pasión.</p>
+                                </li>
+                                <li>
+                                    <h3>ETO-TA-LICO <span>€ 14,25</span></h3>
+                                    <p>Gin aromático infusionado en lima y jengibre, zumo de limón, puré de yuzu, salsa
+                                        de soja,
+                                        sirope
+                                        de
+                                        jengibre casero y ginger beer.</p>
+                                </li>
+                                <li>
+                                    <h3>PALOMITAS <span>€ 15,00</span></h3>
+                                    <p>Vodka vainilla, puré de mango y fresa, zumo de lima, soda de palomitas. Palomitas
+                                        con sal,
+                                        azúcar
+                                        glass y piri piri.</p>
+                                </li>
+                                <li>
+                                    <h3>PÓCIMA DE HARRY <span>€ 15,00</span></h3>
+                                    <p>Pisco, licor de avellana, limoncello, licor de chocolate blanco, bitter de cacao
+                                        y leche
+                                        entera.
+                                        Polvo de chile y naranja con cacao negro y ferrero rocher.</p>
+                                </li>
+                                <li>
+                                    <h3>PAPARAZZI <span>€ 14,25</span></h3>
+                                    <p>Tequila, licor de chile chipotle, puré de fruta de la pasión, sirope de jengibre
+                                        y soda de
+                                        pomelo.
+                                        Geli de fruta de la pasión picante y sal en escamas.</p>
+                                </li>
+                                <li>
+                                    <h3>PESADILLA ANTES DE NAVIDAD <span>€ 14,25</span></h3>
+                                    <p>Jagermeister, sirope de fresas confitadas en jagermeister, zumo de lima,
+                                        hierbabuena y soda
+                                        de
+                                        jengibre. Volovan relleno de fresa confitada y polvo de jengibre.</p>
+                                </li>
+                            </ul>
+                        </section>
+
+
+
+                        <section>
+                            <h2>Soda sin alcohol</h2>
+                            <ul>
+                                <li>
+                                    <h3>VERY BERRY SODA <span>€ 7,00</span></h3>
+                                    <p>Sirope de arándanos, arándanos macerados, soda.</p>
+                                </li>
+                                <li>
+                                    <h3>BLUE SUMMER SODA <span>€ 7,00</span></h3>
+                                    <p>Puré de fruta de la pasión, sirope de curaçao azul, soda.</p>
+                                </li>
+                                <li>
+                                    <h3>BUTTERFLY PEA PEACH SODA <span>€ 7,00</span></h3>
+                                    <p>Té de flor mariposa, sirope de melocotón, soda.</p>
+                                </li>
+                                <li>
+                                    <h3>LYCHEE ROSE SODA <span>€ 7,00</span></h3>
+                                    <p>Sirope de lychee, sirope de rosas, soda.</p>
+                                </li>
+                            </ul>
+                        </section>
+
+
+
+                        <section>
+                            <h2>Gin & Tonic</h2>
+                            <ul>
+                                <li>
+                                    <h3>XORIGUER <span>€ 8,00</span></h3>
+                                    <p>Aromatizado con unas gotas de sirope de miel, romero y limón.</p>
+                                </li>
+                                <li>
+                                    <h3>INNAT <span>€ 13,00</span></h3>
+                                    <p>Aromatizado con spray de pino mugo.</p>
+                                </li>
+                                <li>
+                                    <h3>GLOP <span>€ 10,00</span></h3>
+                                    <p>Aromatizado con hierbabuena.</p>
+                                </li>
+                                <li>
+                                    <h3>GLOP ROSE <span>€ 11,50</span></h3>
+                                    <p>Aromatizado con piel de naranja y una frambuesa.</p>
+                                </li>
+                                <li>
+                                    <h3>PUERTO DE INDIAS FRESA <span>€ 8,00</span></h3>
+                                    <p>Aromatizada con piel de naranja y una fresa.</p>
+                                </li>
+                                <li>
+                                    <h3>BROCKMANS <span>€ 11,50</span></h3>
+                                    <p>Aromatizada con frutos rojos.</p>
+                                </li>
+                                <li>
+                                    <h3>G'VINE <span>€ 12,50</span></h3>
+                                    <p>Aromatizadas con uvas.</p>
+                                </li>
+                                <li>
+                                    <h3>HENDRICKS <span>€ 12,00</span></h3>
+                                    <p>Aromatizada con spray de pepino y rosas.</p>
+                                </li>
+                                <li>
+                                    <h3>MARTIN MILLERS <span>€ 12,00</span></h3>
+                                    <p>Aromatizada con spray de lavanda y piel de limón.</p>
+                                </li>
+                                <li>
+                                    <h3>BLOOM <span>€ 13,00</span></h3>
+                                    <p>Aromatizada con un gajo de pomelo.</p>
+                                </li>
+                                <li>
+                                    <h3>BOMBAY SAPPHIRE <span>€ 10,00</span></h3>
+                                    <p>Aromatizada con una rodaja de lima.</p>
+                                </li>
+                                <li>
+                                    <h3>NORDES <span>€ 11,00</span></h3>
+                                    <p>Aromatizado con romero y piel de limón.</p>
+                                </li>
+                                <li>
+                                    <h3>GIN MARE <span>€ 12,00</span></h3>
+                                    <p>Aromatizada con una hoja de albahaca.</p>
+                                </li>
+                                <li>
+                                    <h3>ROKU <span>€ 12,00</span></h3>
+                                    <p>Aromatizada con jengibre fresco.</p>
+                                </li>
+                                <li>
+                                    <h3>BEEFEATER <span>€ 9,00</span></h3>
+                                    <p>Aromatizada con piel de limón y rodaja de limón.</p>
+                                </li>
+                                <li>
+                                    <h3>LARIOS <span>€ 8,00</span></h3>
+                                    <p>Aromatizada con piel de limón y rodaja de limón.</p>
+                                </li>
+                                <li>
+                                    <h3>GORDONS <span>€ 8,00</span></h3>
+                                    <p>Aromatizada con piel de limón y rodaja de limón.</p>
+                                </li>
+                                <li>
+                                    <h3>BOMBAY DRY <span>€ 9,00</span></h3>
+                                    <p>Aromatizada con piel de limón y rodaja de limón.</p>
+                                </li>
+                                <li>
+                                    <h3>MONKEY 47 <span>€ 13,00</span></h3>
+                                    <p>Aromatizada con piel de limón y rodaja de limón.</p>
+                                </li>
+                                <li>
+                                    <h3>MOMBASA <span>€ 10,00</span></h3>
+                                    <p>Aromatizada con piel de limón y rodaja de limón.</p>
+                                </li>
+                                <li>
+                                    <h3>TANQUERAY Nº 10 <span>€ 14,00</span></h3>
+                                    <p>Aromatizada con piel de limón y rodaja de limón.</p>
+                                </li>
+                                <li>
+                                    <h3>LONDON Nº3 <span>€ 11,50</span></h3>
+                                    <p>Aromatizada con piel de limón y rodaja de limón.</p>
+                                </li>
+                            </ul>
+                        </section>
+
+
+                        <section>
+                            <h2>Brunch</h2>
+                            <ul>
+                                <li>
+                                    <h3>POLACO <span>€ 8,90</span></h3>
+                                    <p>Bagel con salmón ahumado, queso crema, aguacate y huevas de salmón.</p>
+                                </li>
+                                <li>
+                                    <h3>ITALIANO <span>€ 9,40</span></h3>
+                                    <p>Focaccia con Jamón ahumado, mozzarella fresca, tomate, rúcula y aceite de romero.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>AMERICANO DEL NORTE <span>€ 7,20</span></h3>
+                                    <p>Seis tortitas con mantequilla y frutos rojos confitados. (calientes o fríos)</p>
+                                </li>
+                                <li>
+                                    <h3>AMERICANO DEL SUR <span>€ 7,80</span></h3>
+                                    <p>Bol de yogur natural con fruta fresca del día, granola y chía hidratada.</p>
+                                </li>
+                                <li>
+                                    <h3>ESPAÑOL <span>€ 6,50</span></h3>
+                                    <p>Tostada de pan de semillas, tomate restregado, jamón ibérico y queso semicurado
+                                        de maó.</p>
+                                </li>
+                                <li>
+                                    <h3>FRANCÉS <span>€ 3,90</span></h3>
+                                    <p>Croissant o pan viena calentitos con mantequilla y mermelada.</p>
+                                </li>
+                                <li>
+                                    <h3>OSTADA <span>€ 3,40</span></h3>
+                                    <p>Mantequilla y mermelada / o / tomate con aceite de oliva.</p>
+                                </li>
+                                <li>
+                                    <h3>TOSTADA <span>€ 4,80</span></h3>
+                                    <p>Con tomate y queso semicurado de maó / o / Tomate y Jamón ibérico</p>
+                                </li>
+                                <li>
+                                    <h3>TOSTADA <span>€ 5,20</span></h3>
+                                    <p>Con salmón, aguacate y rúcula.</p>
+                                </li>
+                                <li>
+                                    <h3>TOSTADA <span>€ 5,50</span></h3>
+                                    <p>Sobrasada de Menorca y queso semicurado de maó con miel.</p>
+                                </li>
+                            </ul>
+                        </section>
+
+
+
+                        <section>
+                            <h2>Smoothies</h2>
+                            <ul>
+                                <li>
+                                    <h3>TROPICAL <span>€ 5,80</span></h3>
+                                    <p>Piña, mango, plátano, fruta de la pasión y agua de coco.</p>
+                                </li>
+                                <li>
+                                    <h3>VERDE <span>€ 5,50</span></h3>
+                                    <p>Espinacas, manzana verde, pepino, plátano y zumo de limón.</p>
+                                </li>
+                                <li>
+                                    <h3>ROJO <span>€ 5,30</span></h3>
+                                    <p>Frutos rojos, yogur, plátano, miel y leche.</p>
+                                </li>
+                                <li>
+                                    <h3>MELOCOTÓN <span>€ 5,40</span></h3>
+                                    <p>Melocotón, jengibre, plátano, zumo de naranja y agave.</p>
+                                </li>
+                            </ul>
+                        </section>
+
+
+                        <section>
+                            <h2>Cafés Fríos 350 ml</h2>
+                            <ul>
+                                <li>
+                                    <h3>Americano <span>€ 4,00</span></h3>
+                                    <p>Café frío estilo americano, refrescante y ligero.</p>
+                                </li>
+                                <li>
+                                    <h3>Capuccino <span>€ 4,50</span></h3>
+                                    <p>Café frío con leche espumosa y un toque de canela.</p>
+                                </li>
+                                <li>
+                                    <h3>Latte <span>€ 4,50</span></h3>
+                                    <p>Café frío con leche suave y cremosa.</p>
+                                </li>
+                                <li>
+                                    <h3>Caramel Latte <span>€ 4,70</span></h3>
+                                    <p>Café frío con leche y sirope de caramelo.</p>
+                                </li>
+                                <li>
+                                    <h3>Mocha <span>€ 5,00</span></h3>
+                                    <p>Café frío con chocolate y leche.</p>
+                                </li>
+                                <li>
+                                    <h3>Chocolate Cream <span>€ 5,20</span></h3>
+                                    <p>Bebida fría de chocolate con crema batida.</p>
+                                </li>
+                                <li>
+                                    <h3>Caramel Fresh Milk <span>€ 5,00</span></h3>
+                                    <p>Leche fresca con caramelo servida fría.</p>
+                                </li>
+                                <li>
+                                    <h3>Green Tea <span>€ 4,00</span></h3>
+                                    <p>Té verde frío, ligero y refrescante.</p>
+                                </li>
+                                <li>
+                                    <h3>Chai Tea <span>€ 4,00</span></h3>
+                                    <p>Infusión fría especiada con toques exóticos.</p>
+                                </li>
+                                <li>
+                                    <h3>Milk Chai Tea <span>€ 4,50</span></h3>
+                                    <p>Chai frío con leche, cremoso y aromático.</p>
+                                </li>
+                                <li>
+                                    <h3>Breakfast Tea <span>€ 4,00</span></h3>
+                                    <p>Té negro frío, perfecto para empezar el día.</p>
+                                </li>
+                                <li>
+                                    <h3>Rooibos Tropical <span>€ 4,00</span></h3>
+                                    <p>Infusión fría de rooibos con sabores tropicales.</p>
+                                </li>
+                            </ul>
+
+                        </section>
+
+
+                        <section>
+
+                            <h2>Take Away - Cafés y Tés en taza</h2>
+                            <ul>
+                                <li>
+                                    <h3>Expresso <span>€ 1,40</span></h3>
+                                    <p>Café corto e intenso.</p>
+                                </li>
+                                <li>
+                                    <h3>Cortado <span>€ 1,45</span></h3>
+                                    <p>Expresso con un toque de leche.</p>
+                                </li>
+                                <li>
+                                    <h3>Americano <span>€ 1,50</span></h3>
+                                    <p>Café largo y suave.</p>
+                                </li>
+                                <li>
+                                    <h3>Capuccino <span>€ 2,50</span></h3>
+                                    <p>Café con leche y espuma cremosa.</p>
+                                </li>
+                                <li>
+                                    <h3>Latte (Café con leche) <span>€ 2,20</span></h3>
+                                    <p>Café con abundante leche caliente.</p>
+                                </li>
+                                <li>
+                                    <h3>Caramel Macchiato <span>€ 2,80</span></h3>
+                                    <p>Café con leche y sirope de caramelo.</p>
+                                </li>
+                                <li>
+                                    <h3>Mocha <span>€ 3,40</span></h3>
+                                    <p>Café con chocolate y leche cremosa.</p>
+                                </li>
+                                <li>
+                                    <h3>Chocolate Cream <span>€ 3,20</span></h3>
+                                    <p>Chocolate caliente con crema batida.</p>
+                                </li>
+                                <li>
+                                    <h3>Colacao <span>€ 2,50</span></h3>
+                                    <p>Clásico cacao caliente.</p>
+                                </li>
+                                <li>
+                                    <h3>Caramel Fresh Milk <span>€ 2,50</span></h3>
+                                    <p>Leche fresca con caramelo, caliente o fría.</p>
+                                </li>
+                                <li>
+                                    <h3>Green Tea <span>€ 2,30</span></h3>
+                                    <p>Té verde caliente.</p>
+                                </li>
+                                <li>
+                                    <h3>Chai Tea <span>€ 2,30</span></h3>
+                                    <p>Té especiado estilo indio.</p>
+                                </li>
+                                <li>
+                                    <h3>Milk Chai Tea <span>€ 2,50</span></h3>
+                                    <p>Té chai con leche cremosa.</p>
+                                </li>
+                                <li>
+                                    <h3>English Breakfast Tea <span>€ 2,30</span></h3>
+                                    <p>Té negro inglés clásico.</p>
+                                </li>
+                                <li>
+                                    <h3>Rooibos Tropical <span>€ 2,30</span></h3>
+                                    <p>Infusión caliente de rooibos tropical.</p>
+                                </li>
+                            </ul>
+                        </section>
+
+                    </div>
                     </section>
-        
-                    <hr>
-        
-                    <section>
-                        <h2>Focaccia</h2>
-                        <ul>
-                            <li>
-                                <h3>CESAR <span>€ 11,50</span></h3>
-                                <p>Lechuga, croutons, pollo, salsa césar y parmesano rallado.</p>
-                            </li>
-                            <li>
-                                <h3>CLÁSICA <span>€ 10,40</span></h3>
-                                <p>Mezclum de lechugas, tomate, cebolla morada, zanahoria, semillas, olivas y vinagreta de
-                                    balsámico.
-                                </p>
-                            </li>
-                        </ul>
-                    </section>
-        
-                    <hr>
-        
-                    <section>
-                        <h2>Entrantes</h2>
-                        <ul>
-                            <li>
-                                <h3>PROVOLONE <span>€ 12,20</span></h3>
-                                <p>Provolone al horno con tomates secos y finas hierbas. Acompañado de nuestra deliciosa
-                                    focaccia.
-                                </p>
-                            </li>
-                            <li>
-                                <h3>PAPAS AL HORNO <span>€ 8,00</span></h3>
-                                <p>Patatas parisien con salsa mayo trufa y queso parmesano rallado al momento.</p>
-                            </li>
-                            <li>
-                                <h3>NACHOS <span>€ 15,00</span></h3>
-                                <p>Mozzarella fundida, pico de gallo, guacamole y jalapeños.</p>
-                            </li>
-                        </ul>
-                    </section>
-        
-                    <hr>
-        
-                    <section>
-                        <h2>Pizza</h2>
-                        <ul>
-                            <li>
-                                <h3>MARGARITA <span>€ 10,40</span></h3>
-                                <p>Salsa de tomate, mozzarella y albahaca fresca.</p>
-                            </li>
-                            <li>
-                                <h3>4 QUESOS <span>€ 12,10</span></h3>
-                                <p>Salsa de tomate, mozzarella, gorgonzola, parmesano y cabra.</p>
-                            </li>
-                            <li>
-                                <h3>PEPPERONI <span>€ 11,20</span></h3>
-                                <p>Salsa de tomate, mozzarella, pepperoni.</p>
-                            </li>
-                            <li>
-                                <h3>HAWAIANA <span>€ 12,00</span></h3>
-                                <p>Salsa de tomate, mozzarella, jamón york y piña.</p>
-                            </li>
-                            <li>
-                                <h3>YORK <span>€ 12,00</span></h3>
-                                <p>Salsa de tomate, mozzarella, jamón york y champiñones.</p>
-                            </li>
-                            <li>
-                                <h3>VEGETARIANA <span>€ 13,00</span></h3>
-                                <p>Salsa de tomate, mozzarella, pimientos asados, cebolla, champiñones y aceituna negra.</p>
-                            </li>
-                            <li>
-                                <h3>TARTUFO <span>€ 14,20</span></h3>
-                                <p>Salsa blanca, mozzarella, tartufo, panceta ahumada y parmesano.</p>
-                            </li>
-                            <li>
-                                <h3>PERA <span>€ 12,80</span></h3>
-                                <p>Salsa de tomate, mozzarella, gorgonzola, pera, nueces y miel.</p>
-                            </li>
-                            <li>
-                                <h3>CALA BLANCA <span>€ 13,30</span></h3>
-                                <p>Salsa de tomate, mozzarella, sobrasada, queso de maó y miel.</p>
-                            </li>
-                        </ul>
-                    </section>
-        
-                    <hr>
-        
-                    <section>
-                        <h2>Postres</h2>
-                        <ul>
-                            <li>
-                                <h3>FINAL FELIZ <span>€ 11,50</span></h3>
-                                <p>Nutella, plátano, nueces y salsa de frutos rojos para mojar.</p>
-                            </li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Postres</h2>
-                        <ul>
-                            <li>
-                                <h3>TARTA DE ZANAHORIA CASERA <span>€ 8,00</span></h3>
-                                <p>Con helado de chocolate blanco.</p>
-                            </li>
-                            <li>
-                                <h3>COULANT <span>€ 8,00</span></h3>
-                                <p>Con helado de nata y galleta de mantequilla.</p>
-                            </li>
-                            <li>
-                                <h3>TARTA DE QUESO CASERA <span>€ 8,00</span></h3>
-                                <p>Con frutos rojos confitados.</p>
-                            </li>
-                        </ul>
-                    </section>
-        
-                    <hr>
-        
-                    <section>
-                        <h2>Cocktails clásicos</h2>
-                        <ul>
-                            <li>
-                                <h3>BOULEVARDIER <span>€ 11,00</span></h3>
-                                <p>Whiskey americano, vermut rojo, campari.</p>
-                            </li>
-                            <li>
-                                <h3>MINT JULEP <span>€ 11,00</span></h3>
-                                <p>Whiskey americano, sirope simple, zumo de lima y hierbabuena.</p>
-                            </li>
-                            <li>
-                                <h3>OLD FASHION <span>€ 12,00</span></h3>
-                                <p>Whisky americano, 1 azucarillo, bitter de angostura.</p>
-                            </li>
-                            <li>
-                                <h3>PENICILLIN <span>€ 12,00</span></h3>
-                                <p>Whisky escocés, zumo de limón, sirope de agave y jengibre fresco.</p>
-                            </li>
-                            <li>
-                                <h3>ROB ROY <span>€ 11,00</span></h3>
-                                <p>Whisky escocés, vermut rojo.</p>
-                            </li>
-                            <li>
-                                <h3>PORNO STAR MARTINI <span>€ 12,00</span></h3>
-                                <p>Vodka vainilla, licor de fruta de la pasión, puré de fruta de la pasión, zumo de lima.
-                                    Chupito de
-                                    cava.</p>
-                            </li>
-                            <li>
-                                <h3>MOSCOW MULE <span>€ 11,50</span></h3>
-                                <p>Vodka, zumo de lima, jengibre fresco, ginger beer.</p>
-                            </li>
-                            <li>
-                                <h3>EXPRESSO MARTINI <span>€ 11,50</span></h3>
-                                <p>Vodka, café espresso, licor de café.</p>
-                            </li>
-                            <li>
-                                <h3>BLOODY MARY <span>€ 12,00</span></h3>
-                                <p>Vodka, zumo de tomate, salsa Perrins, salsa tabasco, zumo de limón, sal, pimienta, apio.</p>
-                            </li>
-                            <li>
-                                <h3>PINK LADY <span>€ 11,00</span></h3>
-                                <p>Ginebra aromática, zumo de limón, sirope de maraschino, granadina.</p>
-                            </li>
-                            <li>
-                                <h3>DAIQUIRÍ <span>€ 11,00</span></h3>
-                                <p>Ron cubano, zumo de limón y sirope simple.</p>
-                            </li>
-                            <li>
-                                <h3>MOJITO <span>€ 11,00</span></h3>
-                                <p>Ron cubano, zumo de lima, sirope simple, hierbabuena y soda.</p>
-                            </li>
-                            <li>
-                                <h3>PIÑA COLADA <span>€ 11,00</span></h3>
-                                <p>Ron Blanco, leche de coco, piña natural. (Batidora)</p>
-                            </li>
-                            <li>
-                                <h3>DARK AND STORMY <span>€ 11,50</span></h3>
-                                <p>Ron especiado, ginger beer, zumo de lima.</p>
-                            </li>
-                            <li>
-                                <h3>PALOMA <span>€ 11,50</span></h3>
-                                <p>Tequila o Mezcal, zumo de lima, soda de pomelo, ribeteado con sal y polvo de chile.</p>
-                            </li>
-                            <li>
-                                <h3>NAKED AND FAMOUS <span>€ 12,00</span></h3>
-                                <p>Mezcal, chartreuse amarillo, aperol, zumo de lima.</p>
-                            </li>
-                            <li>
-                                <h3>MARGARITA <span>€ 11,00</span></h3>
-                                <p>Tequila, triple seco, zumo de limón, ribete con sal.</p>
-                            </li>
-                            <li>
-                                <h3>OAXACA FASHIONED <span>€ 11,50</span></h3>
-                                <p>Mezcal, tequila añejo, jarabe de agave, bitter de angostura.</p>
-                            </li>
-                            <li>
-                                <h3>CLOVER CLUB <span>€ 11,00</span></h3>
-                                <p>Ginebra seca, 3 frambuesas frescas, zumo de limón, clara de huevo.</p>
-                            </li>
-                            <li>
-                                <h3>LAST WORDS <span>€ 11,50</span></h3>
-                                <p>Ginebra aromática, chartreuse verde, maraschino, zumo de lima.</p>
-                            </li>
-                            <li>
-                                <h3>TOM COLLINS <span>€ 11,00</span></h3>
-                                <p>Ginebra old tom, zumo de limón, soda, sirope simple.</p>
-                            </li>
-                            <li>
-                                <h3>MAI TAI <span>€ 12,00</span></h3>
-                                <p>Ron añejo, overproof, triple seco, zumo de lima, sirope de orgeat, granadina.</p>
-                            </li>
-                        </ul>
-                    </section>
-        
-                    <hr>
-        
-                    <section>
-                        <h2>Jigger Style</h2>
-                        <ul>
-                            <li>
-                                <h3>IT (PAYASO) <span>€ 15,00</span></h3>
-                                <p>Ron añejo Cubano infusionado en piña, limón y canela, zumo de limón, zumo de piña, orgeat,
-                                    soda
-                                    de
-                                    cereza casera y algodón de azúcar.</p>
-                            </li>
-                            <li>
-                                <h3>HELLRAISER <span>€ 15,00</span></h3>
-                                <p>Gin aromático de fresa, puré de frambuesas, sirope de vainilla casero, zumo de lima, bitter
-                                    de
-                                    angostura y cerveza de jengibre.</p>
-                            </li>
-                            <li>
-                                <h3>CALABAZA <span>€ 14,50</span></h3>
-                                <p>Whiskey de centeno, sirope de saúco, sirope de pomelo, campari, zumo de lima, bitter de
-                                    naranja y
-                                    humo de cerezo.</p>
-                            </li>
-                            <li>
-                                <h3>EL HUEVO DE IVÁN <span>€ 14,50</span></h3>
-                                <p>Ron añejo Cubano infusionado en canela, vainilla y anís, zumo de limón, zumo de piña, puré de
-                                    piña,
-                                    puré de mango y frutos rojos confitados.</p>
-                            </li>
-                            <li>
-                                <h3>BÚHO OBSERVADOR <span>€ 14,25</span></h3>
-                                <p>Ron Cubano macerado con granos de café, licor de plátano, zumo de piña, nata, sirope de
-                                    azúcar
-                                    moreno
-                                    y bitter de cacao.</p>
-                            </li>
-                            <li>
-                                <h3>BARRIGUITAS <span>€ 15,00</span></h3>
-                                <p>Whisky escocés, té negro con cardamomo, zumo de lima, puré de fruta de la pasión, sirope de
-                                    vainilla
-                                    casero y espuma de fruta de la pasión.</p>
-                            </li>
-                            <li>
-                                <h3>ETO-TA-LICO <span>€ 14,25</span></h3>
-                                <p>Gin aromático infusionado en lima y jengibre, zumo de limón, puré de yuzu, salsa de soja,
-                                    sirope
-                                    de
-                                    jengibre casero y ginger beer.</p>
-                            </li>
-                            <li>
-                                <h3>PALOMITAS <span>€ 15,00</span></h3>
-                                <p>Vodka vainilla, puré de mango y fresa, zumo de lima, soda de palomitas. Palomitas con sal,
-                                    azúcar
-                                    glass y piri piri.</p>
-                            </li>
-                            <li>
-                                <h3>PÓCIMA DE HARRY <span>€ 15,00</span></h3>
-                                <p>Pisco, licor de avellana, limoncello, licor de chocolate blanco, bitter de cacao y leche
-                                    entera.
-                                    Polvo de chile y naranja con cacao negro y ferrero rocher.</p>
-                            </li>
-                            <li>
-                                <h3>PAPARAZZI <span>€ 14,25</span></h3>
-                                <p>Tequila, licor de chile chipotle, puré de fruta de la pasión, sirope de jengibre y soda de
-                                    pomelo.
-                                    Geli de fruta de la pasión picante y sal en escamas.</p>
-                            </li>
-                            <li>
-                                <h3>PESADILLA ANTES DE NAVIDAD <span>€ 14,25</span></h3>
-                                <p>Jagermeister, sirope de fresas confitadas en jagermeister, zumo de lima, hierbabuena y soda
-                                    de
-                                    jengibre. Volovan relleno de fresa confitada y polvo de jengibre.</p>
-                            </li>
-                        </ul>
-                    </section>
-        
-                    <hr>
-        
-                    <section>
-                        <h2>Soda sin alcohol</h2>
-                        <ul>
-                            <li>
-                                <h3>VERY BERRY SODA <span>€ 7,00</span></h3>
-                                <p>Sirope de arándanos, arándanos macerados, soda.</p>
-                            </li>
-                            <li>
-                                <h3>BLUE SUMMER SODA <span>€ 7,00</span></h3>
-                                <p>Puré de fruta de la pasión, sirope de curaçao azul, soda.</p>
-                            </li>
-                            <li>
-                                <h3>BUTTERFLY PEA PEACH SODA <span>€ 7,00</span></h3>
-                                <p>Té de flor mariposa, sirope de melocotón, soda.</p>
-                            </li>
-                            <li>
-                                <h3>LYCHEE ROSE SODA <span>€ 7,00</span></h3>
-                                <p>Sirope de lychee, sirope de rosas, soda.</p>
-                            </li>
-                        </ul>
-                    </section>
-        
-                    <hr>
-        
-                    <section>
-                        <h2>Gin & Tonic</h2>
-                        <ul>
-                            <li>
-                                <h3>XORIGUER <span>€ 8,00</span></h3>
-                                <p>Aromatizado con unas gotas de sirope de miel, romero y limón.</p>
-                            </li>
-                            <li>
-                                <h3>INNAT <span>€ 13,00</span></h3>
-                                <p>Aromatizado con spray de pino mugo.</p>
-                            </li>
-                            <li>
-                                <h3>GLOP <span>€ 10,00</span></h3>
-                                <p>Aromatizado con hierbabuena.</p>
-                            </li>
-                            <li>
-                                <h3>GLOP ROSE <span>€ 11,50</span></h3>
-                                <p>Aromatizado con piel de naranja y una frambuesa.</p>
-                            </li>
-                            <li>
-                                <h3>PUERTO DE INDIAS FRESA <span>€ 8,00</span></h3>
-                                <p>Aromatizada con piel de naranja y una fresa.</p>
-                            </li>
-                            <li>
-                                <h3>BROCKMANS <span>€ 11,50</span></h3>
-                                <p>Aromatizada con frutos rojos.</p>
-                            </li>
-                            <li>
-                                <h3>G'VINE <span>€ 12,50</span></h3>
-                                <p>Aromatizadas con uvas.</p>
-                            </li>
-                            <li>
-                                <h3>HENDRICKS <span>€ 12,00</span></h3>
-                                <p>Aromatizada con spray de pepino y rosas.</p>
-                            </li>
-                            <li>
-                                <h3>MARTIN MILLERS <span>€ 12,00</span></h3>
-                                <p>Aromatizada con spray de lavanda y piel de limón.</p>
-                            </li>
-                            <li>
-                                <h3>BLOOM <span>€ 13,00</span></h3>
-                                <p>Aromatizada con un gajo de pomelo.</p>
-                            </li>
-                            <li>
-                                <h3>BOMBAY SAPPHIRE <span>€ 10,00</span></h3>
-                                <p>Aromatizada con una rodaja de lima.</p>
-                            </li>
-                            <li>
-                                <h3>NORDES <span>€ 11,00</span></h3>
-                                <p>Aromatizado con romero y piel de limón.</p>
-                            </li>
-                            <li>
-                                <h3>GIN MARE <span>€ 12,00</span></h3>
-                                <p>Aromatizada con una hoja de albahaca.</p>
-                            </li>
-                            <li>
-                                <h3>ROKU <span>€ 12,00</span></h3>
-                                <p>Aromatizada con jengibre fresco.</p>
-                            </li>
-                            <li>
-                                <h3>BEEFEATER <span>€ 9,00</span></h3>
-                                <p>Aromatizada con piel de limón y rodaja de limón.</p>
-                            </li>
-                            <li>
-                                <h3>LARIOS <span>€ 8,00</span></h3>
-                                <p>Aromatizada con piel de limón y rodaja de limón.</p>
-                            </li>
-                            <li>
-                                <h3>GORDONS <span>€ 8,00</span></h3>
-                                <p>Aromatizada con piel de limón y rodaja de limón.</p>
-                            </li>
-                            <li>
-                                <h3>BOMBAY DRY <span>€ 9,00</span></h3>
-                                <p>Aromatizada con piel de limón y rodaja de limón.</p>
-                            </li>
-                            <li>
-                                <h3>MONKEY 47 <span>€ 13,00</span></h3>
-                                <p>Aromatizada con piel de limón y rodaja de limón.</p>
-                            </li>
-                            <li>
-                                <h3>MOMBASA <span>€ 10,00</span></h3>
-                                <p>Aromatizada con piel de limón y rodaja de limón.</p>
-                            </li>
-                            <li>
-                                <h3>TANQUERAY Nº 10 <span>€ 14,00</span></h3>
-                                <p>Aromatizada con piel de limón y rodaja de limón.</p>
-                            </li>
-                            <li>
-                                <h3>LONDON Nº3 <span>€ 11,50</span></h3>
-                                <p>Aromatizada con piel de limón y rodaja de limón.</p>
-                            </li>
-                        </ul>
-                    </section>
-        
-                    <hr>
-        
-                    <section>
-                        <h2>Brunch</h2>
-                        <ul>
-                            <li>
-                                <h3>POLACO <span>€ 8,90</span></h3>
-                                <p>Bagel con salmón ahumado, queso crema, aguacate y huevas de salmón.</p>
-                            </li>
-                            <li>
-                                <h3>ITALIANO <span>€ 9,40</span></h3>
-                                <p>Focaccia con Jamón ahumado, mozzarella fresca, tomate, rúcula y aceite de romero.</p>
-                            </li>
-                            <li>
-                                <h3>AMERICANO DEL NORTE <span>€ 7,20</span></h3>
-                                <p>Seis tortitas con mantequilla y frutos rojos confitados. (calientes o fríos)</p>
-                            </li>
-                            <li>
-                                <h3>AMERICANO DEL SUR <span>€ 7,80</span></h3>
-                                <p>Bol de yogur natural con fruta fresca del día, granola y chía hidratada.</p>
-                            </li>
-                            <li>
-                                <h3>ESPAÑOL <span>€ 6,50</span></h3>
-                                <p>Tostada de pan de semillas, tomate restregado, jamón ibérico y queso semicurado de maó.</p>
-                            </li>
-                            <li>
-                                <h3>FRANCÉS <span>€ 3,90</span></h3>
-                                <p>Croissant o pan viena calentitos con mantequilla y mermelada.</p>
-                            </li>
-                            <li>
-                                <h3>OSTADA <span>€ 3,40</span></h3>
-                                <p>Mantequilla y mermelada / o / tomate con aceite de oliva.</p>
-                            </li>
-                            <li>
-                                <h3>TOSTADA <span>€ 4,80</span></h3>
-                                <p>Con tomate y queso semicurado de maó / o / Tomate y Jamón ibérico</p>
-                            </li>
-                            <li>
-                                <h3>TOSTADA <span>€ 5,20</span></h3>
-                                <p>Con salmón, aguacate y rúcula.</p>
-                            </li>
-                            <li>
-                                <h3>TOSTADA <span>€ 5,50</span></h3>
-                                <p>Sobrasada de Menorca y queso semicurado de maó con miel.</p>
-                            </li>
-                        </ul>
-                    </section>
-        
-                    <hr>
-        
-                    <section>
-                        <h2>Smoothies</h2>
-                        <ul>
-                            <li>
-                                <h3>TROPICAL <span>€ 5,80</span></h3>
-                                <p>Piña, mango, plátano, fruta de la pasión y agua de coco.</p>
-                            </li>
-                            <li>
-                                <h3>VERDE <span>€ 5,50</span></h3>
-                                <p>Espinacas, manzana verde, pepino, plátano y zumo de limón.</p>
-                            </li>
-                            <li>
-                                <h3>ROJO <span>€ 5,30</span></h3>
-                                <p>Frutos rojos, yogur, plátano, miel y leche.</p>
-                            </li>
-                            <li>
-                                <h3>MELOCOTÓN <span>€ 5,40</span></h3>
-                                <p>Melocotón, jengibre, plátano, zumo de naranja y agave.</p>
-                            </li>
-                        </ul>
-                    </section>
-        
-                    <hr>
-        
-                    <section>
-                        <h2>Cafés Fríos 350 ml</h2>
-                        <ul>
-                            <li>
-                                <h3>Americano <span>€ 4,00</span></h3>
-                                <p>Café frío estilo americano, refrescante y ligero.</p>
-                            </li>
-                            <li>
-                                <h3>Capuccino <span>€ 4,50</span></h3>
-                                <p>Café frío con leche espumosa y un toque de canela.</p>
-                            </li>
-                            <li>
-                                <h3>Latte <span>€ 4,50</span></h3>
-                                <p>Café frío con leche suave y cremosa.</p>
-                            </li>
-                            <li>
-                                <h3>Caramel Latte <span>€ 4,70</span></h3>
-                                <p>Café frío con leche y sirope de caramelo.</p>
-                            </li>
-                            <li>
-                                <h3>Mocha <span>€ 5,00</span></h3>
-                                <p>Café frío con chocolate y leche.</p>
-                            </li>
-                            <li>
-                                <h3>Chocolate Cream <span>€ 5,20</span></h3>
-                                <p>Bebida fría de chocolate con crema batida.</p>
-                            </li>
-                            <li>
-                                <h3>Caramel Fresh Milk <span>€ 5,00</span></h3>
-                                <p>Leche fresca con caramelo servida fría.</p>
-                            </li>
-                            <li>
-                                <h3>Green Tea <span>€ 4,00</span></h3>
-                                <p>Té verde frío, ligero y refrescante.</p>
-                            </li>
-                            <li>
-                                <h3>Chai Tea <span>€ 4,00</span></h3>
-                                <p>Infusión fría especiada con toques exóticos.</p>
-                            </li>
-                            <li>
-                                <h3>Milk Chai Tea <span>€ 4,50</span></h3>
-                                <p>Chai frío con leche, cremoso y aromático.</p>
-                            </li>
-                            <li>
-                                <h3>Breakfast Tea <span>€ 4,00</span></h3>
-                                <p>Té negro frío, perfecto para empezar el día.</p>
-                            </li>
-                            <li>
-                                <h3>Rooibos Tropical <span>€ 4,00</span></h3>
-                                <p>Infusión fría de rooibos con sabores tropicales.</p>
-                            </li>
-                        </ul>
-        
-                    </section>
-        
-                    <hr>
-        
-                    <section>
-        
-                        <h2>Take Away - Cafés y Tés en taza</h2>
-                        <ul>
-                            <li>
-                                <h3>Expresso <span>€ 1,40</span></h3>
-                                <p>Café corto e intenso.</p>
-                            </li>
-                            <li>
-                                <h3>Cortado <span>€ 1,45</span></h3>
-                                <p>Expresso con un toque de leche.</p>
-                            </li>
-                            <li>
-                                <h3>Americano <span>€ 1,50</span></h3>
-                                <p>Café largo y suave.</p>
-                            </li>
-                            <li>
-                                <h3>Capuccino <span>€ 2,50</span></h3>
-                                <p>Café con leche y espuma cremosa.</p>
-                            </li>
-                            <li>
-                                <h3>Latte (Café con leche) <span>€ 2,20</span></h3>
-                                <p>Café con abundante leche caliente.</p>
-                            </li>
-                            <li>
-                                <h3>Caramel Macchiato <span>€ 2,80</span></h3>
-                                <p>Café con leche y sirope de caramelo.</p>
-                            </li>
-                            <li>
-                                <h3>Mocha <span>€ 3,40</span></h3>
-                                <p>Café con chocolate y leche cremosa.</p>
-                            </li>
-                            <li>
-                                <h3>Chocolate Cream <span>€ 3,20</span></h3>
-                                <p>Chocolate caliente con crema batida.</p>
-                            </li>
-                            <li>
-                                <h3>Colacao <span>€ 2,50</span></h3>
-                                <p>Clásico cacao caliente.</p>
-                            </li>
-                            <li>
-                                <h3>Caramel Fresh Milk <span>€ 2,50</span></h3>
-                                <p>Leche fresca con caramelo, caliente o fría.</p>
-                            </li>
-                            <li>
-                                <h3>Green Tea <span>€ 2,30</span></h3>
-                                <p>Té verde caliente.</p>
-                            </li>
-                            <li>
-                                <h3>Chai Tea <span>€ 2,30</span></h3>
-                                <p>Té especiado estilo indio.</p>
-                            </li>
-                            <li>
-                                <h3>Milk Chai Tea <span>€ 2,50</span></h3>
-                                <p>Té chai con leche cremosa.</p>
-                            </li>
-                            <li>
-                                <h3>English Breakfast Tea <span>€ 2,30</span></h3>
-                                <p>Té negro inglés clásico.</p>
-                            </li>
-                            <li>
-                                <h3>Rooibos Tropical <span>€ 2,30</span></h3>
-                                <p>Infusión caliente de rooibos tropical.</p>
-                            </li>
-                        </ul>
-                    </section>
-        
-                </div>
-                </section>
             </aside>
-            <aside id="aside-sobre-nosotros" class="h-full hidden text-white flex flex-col z-10 px-5 mb-10">
+            <aside id="aside-sobre-nosotros"
+                class="h-full hidden text-white flex flex-col z-10 px-5 mb-10 xl:w-1/2 xl:mx-auto">
                 <a class="text-lime-400 hover:text-lime-400 mb-7" href="#" id="aside_sobre_nosotros_volver-btn">&larr;
                     volver</a>
                 <h2 class="text-2xl">Sobre nosotros</h2>
-        
+
                 <h3 class="text-4xl">
                     <strong class="text-7xl text-lime-400">JIGGER</strong> Brunch, pizzería y cocktail bar
                 </h3>
-        
+
                 <p class="mt-4">
                     El rincón donde los cócteles se mezclan con la perfección, el brunch se convierte en una experiencia
                     y las pizzas salen del horno para robarte el corazón.
                 </p>
                 <p class="mt-2">
-                    En <strong>Jigger</strong> cada detalle está pensado para que vivas momentos únicos: desde una mañana
+                    En <strong>Jigger</strong> cada detalle está pensado para que vivas momentos únicos: desde una
+                    mañana
                     tranquila con
                     brunch al sol, hasta una noche vibrante de cócteles y buena compañía.
                 </p>
@@ -882,39 +942,41 @@
                     El mejor bar para disfrutar de cada momento del día.
                     ¡Y todo esto en <strong>Menorca</strong>!
                 </p>
-        
-                <h3 class="text-2xl font-semibold mt-14">Bebidas únicas</h3>
+
+                <h3 class="text-2xl xl:text-5xl font-semibold mt-14">Bebidas únicas</h3>
                 <video class="w-full aspect-video object-center object-cover mt-3" autoplay loop muted playsinline
                     src="video/drink.mp4" type="video/mp4"></video>
-        
+
                 <p class="mt-2">
                     Cócteles de autor preparados con pasión, combinados clásicos reinventados y una carta con los
                     mejores gin-tonics de la isla. Cada bebida es una pequeña obra de arte pensada para sorprenderte.
                 </p>
-        
-        
-                <h3 class="text-2xl font-semibold mt-14">Take away <span class="italic">“Para llevar”</span></h3>
+
+
+                <h3 class="text-2xl xl:text-5xl font-semibold mt-14">Take away <span class="italic">“Para llevar”</span>
+                </h3>
                 <video class="w-full aspect-video object-center object-cover mt-3" autoplay loop muted playsinline
                     src="video/delivery.mp4" type="video/mp4"></video>
-        
+
                 <p class="mt-2">
                     ¿Sin tiempo para quedarte? Llévate la experiencia Jigger contigo.
                     Haz tu pedido y disfrútalo donde quieras... o mejor aún, ¡te lo llevamos nosotros!
                 </p>
-        
-        
-                <h3 class="text-2xl font-semibold mt-14">Ocio nocturno</h3>
+
+
+                <h3 class="text-2xl xl:text-5xl font-semibold mt-14">Ocio nocturno</h3>
                 <video class="w-full aspect-video object-center object-cover mt-3" autoplay loop muted playsinline
                     src="video/pool.mp4" type="video/mp4"></video>
-        
+
                 <p class="mt-2">
-                    Cuando cae el sol, Jigger se transforma. Música en vivo, shishas, billar, dardos y un ambiente que no vas a
+                    Cuando cae el sol, Jigger se transforma. Música en vivo, shishas, billar, dardos y un ambiente que
+                    no vas a
                     encontrar en ningún otro sitio.
                     Ideal para desconectar, divertirse y cerrar el día con estilo.
                 </p>
-        
-        
-        
+
+
+
             </aside>
         </div>
         <footer class="w-auto flex justify-center overflow-hidden relative h-24 xl:w">
@@ -923,31 +985,40 @@
                 Scroll &rarr;
             </p>
             <div id="page-slide" class="flex justify-center items-end gap-1 mb-7 xl:mb-5">
-                <div id="page-slide_section0" class="cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
+                <div id="page-slide_section0"
+                    class="hover:scale-y-150 cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
                     <span class="w-0.5 xl:w-1.5 h-6 xl:h-10 bg-white block rounded-sm"></span>
                 </div>
-                <div id="page-slide_section1" class="cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
+                <div id="page-slide_section1"
+                    class="hover:scale-y-150 cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
                     <span class="w-0.5 xl:w-1.5 h-6 xl:h-10 bg-white block rounded-sm"></span>
                 </div>
-                <div id="page-slide_section2" class="cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
+                <div id="page-slide_section2"
+                    class="hover:scale-y-150 cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
                     <span class="w-0.5 xl:w-1.5 h-6 xl:h-10 bg-white block rounded-sm"></span>
                 </div>
-                <div id="page-slide_section3" class="cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
+                <div id="page-slide_section3"
+                    class="hover:scale-y-150 cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
                     <span class="w-0.5 xl:w-1.5 h-6 xl:h-10 bg-white block rounded-sm"></span>
                 </div>
-                <div id="page-slide_section4" class="cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
+                <div id="page-slide_section4"
+                    class="hover:scale-y-150 cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
                     <span class="w-0.5 xl:w-1.5 h-6 xl:h-10 bg-white block rounded-sm"></span>
                 </div>
-                <div id="page-slide_section5" class="cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
+                <div id="page-slide_section5"
+                    class="hover:scale-y-150 cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
                     <span class="w-0.5 xl:w-1.5 h-6 xl:h-10 bg-white block rounded-sm"></span>
                 </div>
-                <div id="page-slide_section6" class="cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
+                <div id="page-slide_section6"
+                    class="hover:scale-y-150 cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
                     <span class="w-0.5 xl:w-1.5 h-6 xl:h-10 bg-white block rounded-sm"></span>
                 </div>
-                <div id="page-slide_section7" class="cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
+                <div id="page-slide_section7"
+                    class="hover:scale-y-150 cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
                     <span class="w-0.5 xl:w-1.5 h-6 xl:h-10 bg-white block rounded-sm"></span>
                 </div>
-                <div id="page-slide_section8" class="cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
+                <div id="page-slide_section8"
+                    class="hover:scale-y-150 cursor-pointer inline-block p-2 xl:p-5 transition duration-500 ease-in-out">
                     <span class="w-0.5 xl:w-1.5 h-6 xl:h-10 bg-white block rounded-sm"></span>
                 </div>
             </div>

@@ -379,6 +379,14 @@
     --tw-translate-x: calc(var(--spacing) * 5);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .translate-x-\[-100vw\] {
+    --tw-translate-x: -100vw;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-100vwh\] {
+    --tw-translate-x: -100vwh;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-translate-y-7 {
     --tw-translate-y: calc(var(--spacing) * -7);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -399,8 +407,16 @@
     --tw-translate-y: calc(var(--spacing) * 36);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .translate-y-\[-100vh\] {
+    --tw-translate-y: -100vh;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .translate-y-\[6px\] {
     --tw-translate-y: 6px;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[100vh\] {
+    --tw-translate-y: 100vh;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-full {

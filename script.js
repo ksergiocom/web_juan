@@ -69,7 +69,7 @@ let menuIsOpen = false;
 function  openMenu() {
     menuIsOpen = true;
 
-    menuDropdown.classList.remove("-translate-y-full");
+    menuDropdown.classList.remove("translate-y-[-100vh]");
     menuBtnBar1.classList.add('rotate-45');
     menuBtnBar1.classList.add('translate-y-[6px]');
     menuBtnBar2.classList.add('-rotate-45');
@@ -86,7 +86,7 @@ function  openMenu() {
      */
     setTimeout(() => {
         menuDropdownLis.forEach(li => {
-            li.querySelector('a').classList.toggle("translate-y-full");
+            li.querySelector('a').classList.toggle("translate-y-[100vh]");
         })
     },200);
 }
@@ -94,7 +94,7 @@ function  openMenu() {
 function  closeMenu() {
     menuIsOpen = false;
 
-    menuDropdown.classList.add("-translate-y-full");
+    menuDropdown.classList.add("translate-y-[-100vh]");
     menuBtnBar1.classList.remove('rotate-45');
     menuBtnBar1.classList.remove('translate-y-[6px]');
     menuBtnBar2.classList.remove('-rotate-45');
@@ -111,7 +111,7 @@ function  closeMenu() {
      */
     setTimeout(() => {
         menuDropdownLis.forEach(li => {
-            li.querySelector('a').classList.toggle("translate-y-full");
+            li.querySelector('a').classList.toggle("translate-y-[100vh]");
         })
     },200);
 }
@@ -175,13 +175,13 @@ function showPage(pageIdx, down=false){
 
     setTimeout(()=>{
         section.classList.remove('hidden')
-        section.classList.remove('-translate-x-full')
+        section.classList.remove('translate-x-[-100vw]')
         let delay = 50;
         
         function showChildrenRecursive(elements) {
             elements.forEach(el => {
                 setTimeout(() => {
-                    el.classList.remove('-translate-x-full');
+                    el.classList.remove('translate-x-[-100vw]');
                 }, delay);
                 delay += 50;
 
@@ -210,7 +210,7 @@ function hidePage(pageIdx, down = false) {
     function hideChildrenRecursive(elements) {
         elements.forEach(el => {
             setTimeout(() => {
-                el.classList.add('-translate-x-full');
+                el.classList.add('translate-x-[-100vw]');
             }, delay);
             // delay += 100;
 
@@ -224,20 +224,20 @@ function hidePage(pageIdx, down = false) {
 
     // Desplazamiento vertical del contenedor principal
     if (down) {
-        section.classList.add('-translate-y-full');
+        section.classList.add('translate-y-[-100vh]');
     } else {
-        section.classList.add('translate-y-full');
+        section.classList.add('translate-y-[100vh]');
     }
 
     // Ocultar completamente la sección tras la animación
     setTimeout(() => {
         section.classList.add('hidden');
         if (down) {
-            section.classList.remove('-translate-y-full');
+            section.classList.remove('translate-y-[-100vh]');
         } else {
-            section.classList.remove('translate-y-full');
+            section.classList.remove('translate-y-[100vh]');
         }
-        section.classList.add('-translate-x-full');
+        section.classList.add('translate-x-[-100vw]');
     }, TIMEOUT); // Espera a que termine la animación recursiva
 }
 

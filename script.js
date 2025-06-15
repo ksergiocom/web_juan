@@ -5,6 +5,7 @@ const menuBtn = document.getElementById('menu-btn');
 const menuBtnBar1 = document.getElementById('menu-btn_bar1'); 
 const menuBtnBar2 = document.getElementById('menu-btn_bar2'); 
 const menuDropdown = document.getElementById('menu-dropdown');
+const menuLayout = document.getElementById('menu-layout');
 const menuDropdownNav0 = document.getElementById('menu-dropdown_nav0');
 const menuDropdownNav1 = document.getElementById('menu-dropdown_nav1');
 const menuDropdownNav2 = document.getElementById('menu-dropdown_nav2');
@@ -12,6 +13,13 @@ const menuDropdownUl = document.getElementById("menu-dropdown_ul");
 const menuDropdownLis = menuDropdownUl.querySelectorAll("li");
 const footerMsg = document.getElementById('footer-msg');
 const bgVideo = document.getElementById('bg-video');
+const verCartaBtn = document.getElementById('main_section0-btn'); 
+const asideVolverBtn = document.getElementById('aside_volver-btn'); 
+const main = document.querySelector('main');
+const header = document.querySelector('header');
+const aside = document.querySelector('aside');
+const footer = document.querySelector('footer');
+
 
 // Secciones
 const mainSection0 = document.getElementById("main_section0");
@@ -49,6 +57,7 @@ const mainSection0ImgBg = document.getElementById('main_section0_img-bg');
 
 // Control de navegación
 const TIMEOUT = 500;
+let scrollToNav = true;
 let currentPage = null;
 let menuIsOpen = false;
 
@@ -64,6 +73,11 @@ function  openMenu() {
     menuBtnBar1.classList.add('translate-y-[6px]');
     menuBtnBar2.classList.add('-rotate-45');
     menuBtnBar2.classList.add('-translate-y-[6px]');
+
+    // setTimeout(() => {
+    //     menuLayout.classList.add('fixed');
+    //     menuLayout.classList.remove('relative');
+    // },TIMEOUT)
     
     /**
      * La duración de desplegar el menu es de 500ms (HARDCODEADO en la clase).
@@ -84,6 +98,11 @@ function  closeMenu() {
     menuBtnBar1.classList.remove('translate-y-[6px]');
     menuBtnBar2.classList.remove('-rotate-45');
     menuBtnBar2.classList.remove('-translate-y-[6px]');
+
+    // menuLayout.classList.remove('fixed');
+    // setTimeout(()=>{
+    //     menuLayout.classList.add('relative');
+    // },TIMEOUT)
     
     /**
      * La duración de desplegar el menu es de 500ms (HARDCODEADO en la clase).
@@ -99,6 +118,8 @@ function  closeMenu() {
 // Show Pages -----------------------------------------------------------------
 
 function showPage(pageIdx, down=false){
+    volverNavegacion()
+
     console.log('-------- Show Page --------')
     console.log({pageIdx,currentPage})
 
@@ -217,6 +238,21 @@ function hidePage(pageIdx, down = false) {
     }, TIMEOUT); // Espera a que termine la animación recursiva
 }
 
+function volverNavegacion(){
+    scrollToNav = true
+    footer.classList.remove('hidden');
+    main.classList.remove('hidden');
+    aside.classList.add('hidden')
+}
+
+function verCarta(){
+    // closeMenu()
+    scrollToNav = false
+    footer.classList.add('hidden');
+    main.classList.add('hidden');
+    aside.classList.remove('hidden')
+}
+
 /**
  * Events listeners -----------------------------------------------------------
  */
@@ -229,8 +265,19 @@ menuBtn.addEventListener('click', () => {
     }
 })
 
+verCartaBtn.addEventListener('click', () => {
+    verCarta();
+})
+
+asideVolverBtn.addEventListener('click', () => {
+    volverNavegacion();
+})
+
 menuDropdownNav0.addEventListener('click', () => showPage(0))
-menuDropdownNav1.addEventListener('click', () => showPage(1))
+menuDropdownNav1.addEventListener('click', () => {
+    verCarta()
+    closeMenu()
+})
 menuDropdownNav2.addEventListener('click', () => showPage(8))
 
 
@@ -259,8 +306,9 @@ var scrollIdleTime = TIMEOUT; // time interval that we consider a new scroll eve
 window.addEventListener('wheel',wheel);
 
 function wheel(e){
-    e.preventDefault()
-
+    // e.preventDefault()
+    
+    if(!scrollToNav) return
     if(menuIsOpen) return
 
     var delta = e.deltaY;
@@ -302,6 +350,7 @@ window.addEventListener('touchstart', e => {
 window.addEventListener('touchend', e => {
     // e.preventDefault()
 
+    if(!scrollToNav) return
     if(menuIsOpen) return
 
     if (touchStartY === null) return;
@@ -324,6 +373,24 @@ window.addEventListener('touchend', e => {
 
     touchStartY = null;
 });
+
+
+
+/**
+ * Scroll ---------------------------------------------------------------------
+ */
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.remove('bg-transparent');
+      header.classList.add('backdrop-blur-2xl');
+      header.classList.add('shadow'); 
+    } else {
+      header.classList.remove('backdrop-blur-2xl');
+      header.classList.remove('shadow');
+      header.classList.add('bg-transparent');
+    }
+  });
 
 
 /**

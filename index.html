@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="min-h-screen">
+<html lang="en" class="min-h-dvh">
 
 <head>
     <meta charset="UTF-8">
@@ -8,25 +8,6 @@
     <link href="./output.css" rel="stylesheet">
     <title>Yoan</title>
     <style>
-        /* Una animación custom :) */
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateX(-5%);
-                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-            }
-
-            50% {
-                transform: none;
-                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-            }
-        }
-
-        .bounce {
-            animation: bounce 1s infinite;
-        }
-
         /* Truco sucio para prevenir el page refresh en Android al hacer scroll hacia arriba */
         body {
             overscroll-behavior: contain;
@@ -34,7 +15,7 @@
     </style>
 </head>
 
-<body class="bg-gray-900 min-h-screen flex flex-col justify-between">
+<body class="bg-gray-900 min-h-dvh flex flex-col justify-between">
     <video id="bg-video" class="blur-none fixed top-0 left-0 h-dvh w-screen object-cover grayscale opacity-30" autoplay
         muted playsinline loop src="video/cocktail_resize.mp4" type="video/mp4"></video>
     <header class="w-full h-fit text-white flex sticky top-0 z-20 transition-colors duration-500 backdrop-blur-none">
@@ -86,7 +67,8 @@
                 <p class="text-2xl transition duration-300 ease-in-out translate-x-[-100vw]"><span
                         class="text-lime-400 font-bold">Brunch</span> & <span
                         class="text-lime-400 font-bold">Pizza-Cocktail</span> bar</p>
-                <p class="text-2xl transition duration-300 ease-in-out translate-x-[-100vw]">Sentirás la brisa del mar en
+                <p class="text-2xl transition duration-300 ease-in-out translate-x-[-100vw]">Sentirás la brisa del mar
+                    en
                     cada sorbo</p>
             </div>
         </section>
@@ -110,12 +92,13 @@
                         class="text-lime-400 font-bold">Vive</span> la experiencia!</h2>
                 <h3 class="text-md transition duration-300 ease-in-out translate-x-[-100vw]">Crea nuevos recuerdos este
                     verano en <strong>JIGGER</strong> </h3>
-                <p class="transition duration-300 ease-in-out translate-x-[-100vw]">Haz ya tu pedido o reserva una mesa en
+                <p class="transition duration-300 ease-in-out translate-x-[-100vw]">Haz ya tu pedido o reserva una mesa
+                    en
                     <strong><a class="text-lime-400 hover:text-lime-600" href="tel:+34 623.911.195">+34
                             623.911.195</a></strong>
                 </p>
                 <a class="mt-7 transition duration-300 ease-in-out mx-auto translate-x-[-100vw] mb-5 bg-transparent border-1 text-white p-2 px-5 w-fit block"
-                    href="#">Saber más</a>
+                    id="btn-contactanos" href="#">Contáctanos</a>
             </div>
         </section>
         <section id="main_section2"
@@ -206,12 +189,13 @@
             </p>
         </section>
         <section id="main_section8"
-            class="absolute inset-0 h-full w-full overflow-hidden gap-2 flex flex-col items-center transition duration-400 translate-x-[-100vw] hidden">
+            class="absolute inset-0 h-full w-full overflow-hidden gap-1 flex flex-col items-center transition duration-400 translate-x-[-100vw] hidden">
 
             <!-- Imagen decorativa centrada -->
             <div
-                class="bg-white items-center w-fit rounded-full h-1/3 inset-0 flex items-center justify-center transition duration-300 ease-in-out translate-x-[-100vw]">
-                <img class="m-auto h-full object-contain transition duration-300 ease-in-out translate-x-[-100vw]" src="imgs/logo.png" alt="logo" />
+                class="mb-5 bg-white items-center w-fit rounded-full h-1/3 inset-0 flex items-center justify-center transition duration-300 ease-in-out translate-x-[-100vw]">
+                <img class="m-auto h-full object-contain transition duration-300 ease-in-out translate-x-[-100vw]"
+                    src="imgs/logo.png" alt="logo" />
             </div>
 
             <!-- <h3 class="text-3xl transition duration-300 ease-in-out translate-x-[-100vw]">Disfruta con nosotros
@@ -223,7 +207,7 @@
             <p class=" transition duration-300 ease-in-out translate-x-[-100vw]">telf: +34 623.911.195</p>
             <a class=" transition duration-300 ease-in-out translate-x-[-100vw]"
                 href="mailto:jiggercookingcocktail@gmail.com">jiggercookingcocktail@gmail.com</a>
-            <hr class="my-2 w-full border-white transition duration-300 ease-in-out translate-x-[-100vw]">
+            <hr class="my-3 w-full border-white transition duration-300 ease-in-out translate-x-[-100vw]">
 
             <p class=" transition duration-300 ease-in-out translate-x-[-100vw]">De lunes a domingo:</p>
             <p class=" transition duration-300 ease-in-out translate-x-[-100vw]">(09.00h a 13.00h / 18.00h a
@@ -233,12 +217,12 @@
             </p>
 
             <a id="main_section8-btn"
-                class="mt-7 transition duration-300 ease-in-out translate-x-[-100vw] mb-5 bg-transparent border-1 p-2 px-5 w-fit block"
+                class="mt-5 transition duration-300 ease-in-out translate-x-[-100vw] mb-5 bg-transparent border-1 p-2 px-5 w-fit block"
                 href="#">Saber más</a>
 
         </section>
     </main>
-    <aside id="aside-carta" class="h-full hidden text-white flex flex-col gap-5 z-10 px-5">
+    <aside id="aside-carta" class="h-full hidden text-white flex flex-col gap-5 z-10 px-5 pb-7">
         <a class="text-lime-400 hover:text-lime-600" id="aside_volver-btn" href="#">&larr; volver</a>
         <section>
             <h2>Sandwiches</h2>
@@ -778,34 +762,46 @@
             </ul>
         </section>
     </aside>
-    <aside id="aside-sobre-nosotros" class="h-full hidden text-white flex flex-col gap-5 z-10 px-5 mb-10">
-        <a class="text-lime-400 hover:text-lime-400" href="#" id="aside_sobre_nosotros_volver-btn">&larr; volver</a>
-        <h2>Sobre nosotros</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore
-            eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim
-            molestias sed reiciendis rerum!</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore
-            eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim
-            molestias sed reiciendis rerum!</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore
-            eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim
-            molestias sed reiciendis rerum!</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore
-            eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim
-            molestias sed reiciendis rerum!</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore
-            eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim
-            molestias sed reiciendis rerum!</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore
-            eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim
-            molestias sed reiciendis rerum!</p>
+    <aside id="aside-sobre-nosotros" class="h-full hidden text-white flex flex-col z-10 px-5 mb-10">
+        <a class="text-lime-400 hover:text-lime-400 mb-7" href="#" id="aside_sobre_nosotros_volver-btn">&larr; volver</a>
+        <h2 class="text-2xl">Sobre nosotros</h2>
+        <h3 class="text-4xl"><strong class="text-7xl text-lime-400">JIGGER</strong> Brunch, pizzeria y cocktailbar</h3>
+        <p>El rincón donde los cócteles se
+            mezclan con la perfección, el brunch
+            se convierte en una experiencia y las
+            pizzas salen del horno para robarte
+            el corazón.
+
+            El mejor bar para disfrutar de cada
+            momento del día.
+
+            ¡Y todo esto en <strong>Menorca</strong>!</p>
+
+            <h3 class="text-2xl font-semibold mt-24">Bebidas únicas</h3>
+            <p>Cocktail de autor, clásicos y los mejores gin and tonic de la isla.</p>
+        <video class="w-full aspect-video object-center object-cover mt-3" autoplay loop muted playsinline
+            src="video/drink.mp4" type="video/mp4"></video>
+            <h3 class="text-2xl font-semibold mt-24">Take away
+    
+                “Para llevar”</h3>
+            <p>Llévate la experiencia Jigger donde quieras
+                o te la llevamos nosotros.</p>
+        <video class="w-full aspect-video object-center object-cover mt-3" autoplay loop muted playsinline
+            src="video/delivery.mp4" type="video/mp4"></video>
+            <h3 class="text-2xl font-semibold mt-24">Ocio Nocturno</h3>
+            <p>Música , shishas, billar, dardos y
+    
+                el mejor ambiente de la zona.</p>
+        <video class="w-full aspect-video object-center object-cover mt-3" autoplay loop muted playsinline
+            src="video/pool.mp4" type="video/mp4"></video>
+
     </aside>
     <footer class="w-full flex justify-center overflow-hidden relative h-24">
-        <p id="footer-msg"
-            class="bounce text-white rotate-90 w-fit origin-bottom-right translate-x-[-100vw] p-1 absolute left-0 bottom-0 transition duration-500">
+        <p id="footer-msg" style="writing-mode: vertical-lr;-webkit-writing-mode: vertical-rl;"
+            class="animate-bounce text-white p-1 absolute left-0 bottom-0 transition duration-500">
             Scroll &rarr;
         </p>
-        <div id="page-slide" class="flex justify-center items-end gap-1">
+        <div id="page-slide" class="flex justify-center items-end gap-1 mb-7">
             <div id="page-slide_section0" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
                 <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
             </div>

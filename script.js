@@ -22,6 +22,7 @@ const header = document.querySelector('header');
 const asideCarta = document.querySelector('#aside-carta');
 const asideSobreNosotros = document.querySelector('#aside-sobre-nosotros');
 const footer = document.querySelector('footer');
+const contactanosBtn = document.getElementById('btn-contactanos');
 
 
 // Secciones
@@ -300,7 +301,7 @@ menuDropdownNav1.addEventListener('click', () => {
 })
 menuDropdownNav2.addEventListener('click', () => showPage(8))
 
-
+contactanosBtn.addEventListener('click', () => showPage(8))
 
 pageSlideSection0.addEventListener('click', () => showPage(0))
 pageSlideSection2.addEventListener('click', () => showPage(2))

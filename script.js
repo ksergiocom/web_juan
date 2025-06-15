@@ -401,14 +401,14 @@ window.addEventListener('touchend', e => {
  */
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      header.classList.remove('bg-transparent');
+    if (window.scrollY > 5) {
+      header.classList.remove('backdrop-blur-none');
       header.classList.add('backdrop-blur-2xl');
       header.classList.add('shadow'); 
     } else {
       header.classList.remove('backdrop-blur-2xl');
       header.classList.remove('shadow');
-      header.classList.add('bg-transparent');
+      header.classList.add('backdrop-blur-none');
     }
   });
 

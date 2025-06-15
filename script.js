@@ -248,6 +248,8 @@ function volverNavegacion(){
     main.classList.remove('hidden');
     asideCarta.classList.add('hidden')
     asideSobreNosotros.classList.add('hidden')
+    bgVideo.classList.remove('opacity-10');
+    bgVideo.classList.add('opacity-30');
 }
 
 function verCarta(){
@@ -256,6 +258,9 @@ function verCarta(){
     footer.classList.add('hidden');
     main.classList.add('hidden');
     asideCarta.classList.remove('hidden')
+    bgVideo.classList.remove('opacity-30')
+    bgVideo.classList.add('opacity-10');
+
 }
 
 function verSobreNosotros(){
@@ -264,6 +269,9 @@ function verSobreNosotros(){
     footer.classList.add('hidden');
     main.classList.add('hidden');
     asideSobreNosotros.classList.remove('hidden')
+    bgVideo.classList.remove('opacity-30')
+    bgVideo.classList.add('opacity-10');
+
 }
 
 /**
@@ -380,12 +388,12 @@ window.addEventListener('touchend', e => {
     const timeNow = performance.now();
 
     if (Math.abs(deltaY) > 10 && timeNow > lastScroll + scrollIdleTime) { // sensibilidad mínima
-        if (deltaY > 0 && currentPage > 0) {
+        if (deltaY > 0 && currentPage < 8) {
             // swipe hacia arriba
-            showPage(currentPage - 1, false);
-        } else if (deltaY < 0 && currentPage < 8) {
+            showPage(currentPage + 1, false);
+        } else if (deltaY < 0 && currentPage > 0) {
             // swipe hacia abajo
-            showPage(currentPage + 1, true);
+            showPage(currentPage - 1, true);
         }
 
         lastScroll = timeNow;

@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+#aside-carta h2{
+    @apply text-5xl mb-4 font-bold;
+}
+
+#aside-carta h3{
+    @apply text-2xl font-bold;
+}
+
+
+#aside-carta h3 span{
+    @apply font-bold text-lime-400;
+}
+
+#aside-carta p{
+    @apply font-light;
+}
+
+#aside-carta ul{
+    @apply flex flex-col gap-3;
+}

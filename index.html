@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link href="./output.css" rel="stylesheet">
     <title>Yoan</title>
     <style>
         /* Una animación custom :) */
@@ -89,7 +90,7 @@
             </div>
         </section>
         <section id="main_section1"
-            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
+            class="absolute inset-0 flex-1 w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden items-center justify-center">
             <div class="flex flex-col absolute h-full w-full transition duration-300 ease-in-out -translate-x-full">
                 <div
                     class="transition duration-300 ease-in-out -translate-x-full bg-black h-1/2 translate-y-7 translate-x-5 ">
@@ -103,63 +104,47 @@
                 </div>
             </div>
             <div
-                class="z-10 flex flex-col w-2/3 mx-auto text-center gap-3 transition duration-300 ease-in-out -translate-x-full overflow-hidden">
-                <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">Deja lo cotidiano atrás</h2>
-                <h3 class="text-md transition duration-300 ease-in-out -translate-x-full">Sumérgete en la experiencia
-                    Jigger</h3>
+                class="z-10 flex flex-col w-2/3 mx-auto text-center gap-3 transition duration-300 ease-in-out -translate-x-full overflow-hidden justify-center items-center">
+                <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">¡<span class="text-lime-400 font-bold">Vive</span> la experiencia!</h2>
+                <h3 class="text-md transition duration-300 ease-in-out -translate-x-full">Crea nuevos recuerdos este
+verano en <strong>JIGGER</strong> </h3>
                 <p class="transition duration-300 ease-in-out -translate-x-full">Haz ya tu pedido o reserva una mesa en
-                    <strong>+34 623.911.195</strong>
+                    <strong><a class="text-lime-400 hover:text-lime-600" href="tel:+34 623.911.195">+34 623.911.195</a></strong>
                 </p>
-                <a class="mt-3 transition duration-300 ease-in-out mx-auto -translate-x-full mb-5 bg-transparent border-1 text-white p-2 px-5 w-fit block"
-                    href="#">Contáctanos</a>
+                <a class="mt-7 transition duration-300 ease-in-out mx-auto -translate-x-full mb-5 bg-transparent border-1 text-white p-2 px-5 w-fit block"
+                    href="#">Saber más</a>
             </div>
         </section>
         <section id="main_section2"
-            class=" absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
-            <!-- <img class="w-full h-1/2  transition duration-300 ease-in-out -translate-x-full object-center object-cover" src="imgs/img2.jpg" alt="img2"> -->
-            <video
-                class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
-                autoplay loop muted playsinline src="video/chispas_resize.mp4" type="video/mp4"></video>
-            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¿Brunch?</h2>
-            <p class=" transition duration-300 ease-in-out -translate-x-full">Este verano, despierta con el mar
-                como compañia y disfruta de un
-                brunch único frente a la costa del
-                mediterráneo. Siente la brisa
-                mientras saboreas cada bocado y
-                haz de cada mañana un momento
-                inolvidable.</p>
-        </section>
-        <section id="main_section3"
-            class=" absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
-            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¿”Good Morning”sin café?</h2>
-            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl mb-5">No es posible</h2>
-            <p class=" transition duration-300 ease-in-out -translate-x-full mb-5">¡Despierta con energía! Siente el
+            class=" absolute inset-0 h-full w-full overflow-hidden flex flex-col duration-400 -translate-x-full hidden justify-center">
+            <h2 class="mb-3 transition duration-300 ease-in-out -translate-x-full text-4xl">¿<span class="text-lime-400 font-bold">”Good Morning”</span> sin café? <span class="text-2xl">No es posible</span></h2>
+            <p class=" transition duration-300 ease-in-out -translate-x-full mb-5">¡Despierta con <span class="text-lime-400 font-semibold">energía</span>! Siente el
                 sabor vibrante, el
                 amanecer, el sol en cada taza y
-                convierte tu día en una experiencia
+                convierte tu día en una <span class="text-lime-400 font-semibold">experiencia</span>
                 llena de frescura y vitalidad.</p>
-            <img class="w-full h-1/2  transition duration-300 ease-in-out -translate-x-full object-center object-cover"
+            <img class="w-full h-1/2 mt-2 transition duration-300 ease-in-out -translate-x-full object-center object-cover"
                 src="imgs/coffe.jpg" alt="coffe">
         </section>
-        <section id="main_section4"
-            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
+        <section id="main_section3"
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-center duration-400 -translate-x-full hidden">
             <video
                 class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
                 autoplay loop muted playsinline src="video/cocktail_resize.mp4" type="video/mp4"></video>
-            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">Sabor sin resaca</h2>
-            <p class=" transition duration-300 ease-in-out -translate-x-full">Vive la fiesta sin límites.
+            <h2 class="mt-7 transition duration-300 ease-in-out -translate-x-full text-4xl"><span class="text-lime-400 font-semibold">Sabor</span> sin resaca</h2>
+            <p class=" mt-3 transition duration-300 ease-in-out -translate-x-full"><span class="text-lime-400 font-semibold">Vive</span> la fiesta sin límites.
                 Con nuestras bebidas sin alcohol
                 harás que las vacaciones sean
-                inolvidables. ¡Eso es seguro!</p>
+                <span class="text-lime-400 font-semibold">inolvidables.</span> ¡Eso es seguro!</p>
         </section>
-        <section id="main_section5"
-            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
-            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¡Para flipar!</h2>
+        <section id="main_section4"
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-center gap-3 duration-400 -translate-x-full hidden">
+            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¡Para <span class="text-lime-400 font-semibold">flipar</span>!</h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full mb-5">Te apetece un cocktail?
 
                 Déjalo en nuestras manos.
 
-                Los chicos de Jigger saben lo que se
+                Los chicos de <span class="text-lime-400 font-semibold">Jigger</span> saben lo que se
                 hacen y pasando cinco minutos con
                 ellos entenderás porqué.
 
@@ -167,45 +152,45 @@
             <img class="w-full h-1/2  transition duration-300 ease-in-out -translate-x-full object-center object-cover"
                 src="imgs/flipar.jpg" alt="flipar">
         </section>
-        <section id="main_section6"
-            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
+        <section id="main_section5"
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-center gap-3 duration-400 -translate-x-full hidden">
             <video
-                class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
+                class="w-full mb-2 h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
                 autoplay loop muted playsinline src="video/pizza.mp4" type="video/mp4"></video>
-            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">Pizza o Focaccia</h2>
+            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl"><span class="text-lime-400 font-semibold">Pizza</span> o <span class="text-lime-400 font-semibold">Focaccia</span></h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full">Pizzas perfectas y focaccias suaves y
                 crujientes, hechas con los mejores
-                inglimeientes frescos. El lugar ideal si
+                inglimeientes frescos. El lugar <span class="text-lime-400 font-semibold">ideal</span> si
                 quieres disfrutar del auténtico sabor
                 de italia.</p>
         </section>
-        <section id="main_section7"
-            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
-            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¿Algo dulce?</h2>
+        <section id="main_section6"
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-center gap-3 duration-400 -translate-x-full hidden">
+            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¿Algo <span class="text-lime-400 font-semibold">dulce</span>?</h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full mb-5">“Endulza tu día con nuestros
                 irresistibles postres, hechos con
                 amor y los mejores inglimeientes
                 para que cada bocado sea una
-                explosión de sabor”</p>
+                explosión de <span class="text-lime-400 font-semibold">sabor</span>”</p>
             <video
-                class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
+                class="w-full h-1/2 w-full transition duration-300 mt-2 ease-in-out -translate-x-full object-center object-cover"
                 autoplay loop muted playsinline src="video/dulce.mp4" type="video/mp4"></video>
         </section>
-        <section id="main_section8"
-            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
+        <section id="main_section7"
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-center gap-3 duration-400 -translate-x-full hidden">
             <video
-                class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
+                class="w-full h-1/2 w-full transition duration-300 ease-in-out mb-3 -translate-x-full object-center object-cover"
                 autoplay loop muted playsinline src="video/hooka.mp4" type="video/mp4"></video>
-            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">HOOKAH</h2>
+            <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl"><span class="text-lime-400 font-semibold">HOOKAH</span></h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full">Eleva tu experiencia con nuestras
-                SHISHAS, una forma única de
+                <span class="text-lime-400 font-semibold">SHISHAS</span>, una forma única de
                 compartir y disfrutar de la noche
                 con tus amigos.
 
                 “Sumérgete en una experiencia
-                sensorial sin igual”</p>
+                sensorial <span class="text-lime-400 font-semibold">sin igual</span>”</p>
         </section>
-        <section id="main_section9"
+        <section id="main_section8"
             class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
             <div class="bg-white h-full w-full transition duration-300 ease-in-out -translate-x-full relative">
 
@@ -217,7 +202,7 @@
                 <!-- Contenido de texto por encima, pero sin superposición directa -->
                 <div
                     class="relative h-full z-10 p-8 flex flex-col gap-4 justify-evenly text-gray-900 transition duration-300 ease-in-out -translate-x-full">
-                    <a id="main_section9-btn" class="mb-3 transition duration-300 ease-in-out -translate-x-full mb-5 bg-transparent border-1 text-gray-900 p-2 px-5 w-fit block"
+                    <a id="main_section8-btn" class="mb-3 transition duration-300 ease-in-out -translate-x-full mb-5 bg-transparent border-1 text-gray-900 p-2 px-5 w-fit block"
                     href="#">Saber más</a>
                     <div class="z-10 p-3 transition duration-300 ease-in-out -translate-x-full">
                         <h3 class="text-3xl transition duration-300 ease-in-out -translate-x-full">Disfruta con nosotros
@@ -825,9 +810,6 @@
                 <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
             </div>
             <div id="page-slide_section8" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
-                <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
-            </div>
-            <div id="page-slide_section9" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
                 <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
             </div>
         </div>

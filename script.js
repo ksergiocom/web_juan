@@ -14,7 +14,7 @@ const menuDropdownLis = menuDropdownUl.querySelectorAll("li");
 const footerMsg = document.getElementById('footer-msg');
 const bgVideo = document.getElementById('bg-video');
 const verCartaBtn = document.getElementById('main_section0-btn'); 
-const verSobreNosotrosBtn = document.getElementById('main_section9-btn'); 
+const verSobreNosotrosBtn = document.getElementById('main_section8-btn'); 
 const asideVolverBtn = document.getElementById('aside_volver-btn'); 
 const asideSobreNostrosVolverBtn = document.getElementById('aside_sobre_nosotros_volver-btn'); 
 const main = document.querySelector('main');
@@ -34,10 +34,9 @@ const mainSection5 = document.getElementById("main_section5");
 const mainSection6 = document.getElementById("main_section6");
 const mainSection7 = document.getElementById("main_section7");
 const mainSection8 = document.getElementById("main_section8");
-const mainSection9 = document.getElementById("main_section9");
 
 
-const mainSections = [mainSection0, mainSection1, mainSection2, mainSection3, mainSection4, mainSection5, mainSection6, mainSection7, mainSection8, mainSection9]
+const mainSections = [mainSection0, mainSection1, mainSection2, mainSection3, mainSection4, mainSection5, mainSection6, mainSection7, mainSection8]
 
 // PageSlider del footer
 const pageSlideSection0 = document.getElementById('page-slide_section0');
@@ -49,9 +48,8 @@ const pageSlideSection5 = document.getElementById('page-slide_section5');
 const pageSlideSection6 = document.getElementById('page-slide_section6');
 const pageSlideSection7 = document.getElementById('page-slide_section7');
 const pageSlideSection8 = document.getElementById('page-slide_section8');
-const pageSlideSection9 = document.getElementById('page-slide_section9');
 
-const pageSliders = [pageSlideSection0, pageSlideSection1, pageSlideSection2, pageSlideSection3, pageSlideSection4, pageSlideSection5, pageSlideSection6, pageSlideSection7, pageSlideSection8, pageSlideSection9]
+const pageSliders = [pageSlideSection0, pageSlideSection1, pageSlideSection2, pageSlideSection3, pageSlideSection4, pageSlideSection5, pageSlideSection6, pageSlideSection7, pageSlideSection8]
 
 // Elementos de secciones
 // Seccion0
@@ -126,11 +124,16 @@ function showPage(pageIdx, down=false){
     console.log('-------- Show Page --------')
     console.log({pageIdx,currentPage})
 
-
+ 
 
     let timeoutCustom = TIMEOUT;
 
+    if(menuIsOpen){
+        closeMenu();
+    }
+    
     if(currentPage != null) {
+        if(pageIdx == currentPage)return
         hidePage(currentPage, down);
     }else{
         currentPage=0;
@@ -138,9 +141,6 @@ function showPage(pageIdx, down=false){
         timeoutCustom=100;
     }
 
-    if(menuIsOpen){
-        closeMenu();
-    }
 
     if(pageIdx!=0){
         footerMsg.classList.add('translate-y-36')
@@ -298,7 +298,7 @@ menuDropdownNav1.addEventListener('click', () => {
     verCarta()
     closeMenu()
 })
-menuDropdownNav2.addEventListener('click', () => showPage(9))
+menuDropdownNav2.addEventListener('click', () => showPage(8))
 
 
 
@@ -311,7 +311,6 @@ pageSlideSection5.addEventListener('click', () => showPage(5))
 pageSlideSection6.addEventListener('click', () => showPage(6))
 pageSlideSection7.addEventListener('click', () => showPage(7))
 pageSlideSection8.addEventListener('click', () => showPage(8))
-pageSlideSection9.addEventListener('click', () => showPage(9))
 
 
 
@@ -345,7 +344,7 @@ function wheel(e){
         console.log('abajo')
         console.log({currentPage})
 
-        if(currentPage<9)
+        if(currentPage<8)
         showPage(currentPage+1, true);
     }
     lastScroll = timeNow;
@@ -383,7 +382,7 @@ window.addEventListener('touchend', e => {
         if (deltaY > 0 && currentPage > 0) {
             // swipe hacia arriba
             showPage(currentPage - 1, false);
-        } else if (deltaY < 0 && currentPage < 9) {
+        } else if (deltaY < 0 && currentPage < 8) {
             // swipe hacia abajo
             showPage(currentPage + 1, true);
         }

@@ -42,7 +42,7 @@
                 <h3><strong class="uppercase text-lime-400">Jigger</strong> Cocktail Bar</h3>
             </div>
             <div>
-                <button id="menu-btn" class=" flex flex-col gap-2 cursor-pointer p-2">
+                <button id="menu-btn" class=" flex flex-col gap-2 cursor-pointer">
                     <span id="menu-btn_bar1"
                         class="block w-6 h-1 bg-white transition-transform duration-300 origin-center rounded-sm"></span>
                     <span id="menu-btn_bar2"
@@ -89,7 +89,7 @@
             </div>
         </section>
         <section id="main_section1"
-            class="relative h-full w-full overflow-hidden flex flex-col justify-center gap-5 duration-400 transition -translate-x-full- hidden">
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
             <div class="flex flex-col absolute h-full w-full transition duration-300 ease-in-out -translate-x-full">
                 <div
                     class="transition duration-300 ease-in-out -translate-x-full bg-black h-1/2 translate-y-7 translate-x-5 ">
@@ -115,7 +115,7 @@
             </div>
         </section>
         <section id="main_section2"
-            class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
+            class=" absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
             <!-- <img class="w-full h-1/2  transition duration-300 ease-in-out -translate-x-full object-center object-cover" src="imgs/img2.jpg" alt="img2"> -->
             <video
                 class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
@@ -130,7 +130,7 @@
                 inolvidable.</p>
         </section>
         <section id="main_section3"
-            class=" h-full w-full overflow-hidden flex flex-col transition duration-400 -translate-x-full hidden">
+            class=" absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¿”Good Morning”sin café?</h2>
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl mb-5">No es posible</h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full mb-5">¡Despierta con energía! Siente el
@@ -142,7 +142,7 @@
                 src="imgs/coffe.jpg" alt="coffe">
         </section>
         <section id="main_section4"
-            class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
             <video
                 class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
                 autoplay loop muted playsinline src="video/cocktail_resize.mp4" type="video/mp4"></video>
@@ -153,7 +153,7 @@
                 inolvidables. ¡Eso es seguro!</p>
         </section>
         <section id="main_section5"
-            class=" h-full w-full overflow-hidden flex flex-col transition duration-400 -translate-x-full hidden">
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¡Para flipar!</h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full mb-5">Te apetece un cocktail?
 
@@ -168,7 +168,7 @@
                 src="imgs/flipar.jpg" alt="flipar">
         </section>
         <section id="main_section6"
-            class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
             <video
                 class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
                 autoplay loop muted playsinline src="video/pizza.mp4" type="video/mp4"></video>
@@ -180,7 +180,7 @@
                 de italia.</p>
         </section>
         <section id="main_section7"
-            class=" h-full w-full overflow-hidden flex flex-col transition duration-400 -translate-x-full hidden">
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¿Algo dulce?</h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full mb-5">“Endulza tu día con nuestros
                 irresistibles postres, hechos con
@@ -192,7 +192,7 @@
                 autoplay loop muted playsinline src="video/dulce.mp4" type="video/mp4"></video>
         </section>
         <section id="main_section8"
-            class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
             <video
                 class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
                 autoplay loop muted playsinline src="video/hooka.mp4" type="video/mp4"></video>
@@ -206,7 +206,7 @@
                 sensorial sin igual”</p>
         </section>
         <section id="main_section9"
-            class="h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
+            class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
             <div class="bg-white h-full w-full transition duration-300 ease-in-out -translate-x-full relative">
 
                 <!-- Imagen decorativa centrada -->
@@ -217,6 +217,8 @@
                 <!-- Contenido de texto por encima, pero sin superposición directa -->
                 <div
                     class="relative h-full z-10 p-8 flex flex-col gap-4 justify-evenly text-gray-900 transition duration-300 ease-in-out -translate-x-full">
+                    <a id="main_section9-btn" class="mb-3 transition duration-300 ease-in-out -translate-x-full mb-5 bg-transparent border-1 text-gray-900 p-2 px-5 w-fit block"
+                    href="#">Saber más</a>
                     <div class="z-10 p-3 transition duration-300 ease-in-out -translate-x-full">
                         <h3 class="text-3xl transition duration-300 ease-in-out -translate-x-full">Disfruta con nosotros
                         </h3>
@@ -228,7 +230,6 @@
                         <a class=" transition duration-300 ease-in-out -translate-x-full"
                             href="mailto:jiggercookingcocktail@gmail.com">jiggercookingcocktail@gmail.com</a>
                     </div>
-                    <hr class="z-10 transition duration-300 ease-in-out -translate-x-full">
                     <div class="z-10 p-3 transition duration-300 ease-in-out -translate-x-full">
                         <h3 class="text-3xl transition duration-300 ease-in-out -translate-x-full">Horario</h3>
                         <p class=" transition duration-300 ease-in-out -translate-x-full">De lunes a domingo:</p>
@@ -243,7 +244,7 @@
             </div>
         </section>
     </main>
-    <aside class="h-full hidden text-white flex flex-col gap-5 z-10 px-5">
+    <aside id="aside-carta" class="h-full hidden text-white flex flex-col gap-5 z-10 px-5">
         <a id="aside_volver-btn" href="#">&larr; volver</a>
         <section>
             <h2>Sandwiches</h2>
@@ -782,6 +783,16 @@
                 <li>Rooibos tropical ................................... € 2,30</li>
             </ul>
         </section>
+    </aside>
+    <aside id="aside-sobre-nosotros" class="h-full hidden text-white flex flex-col gap-5 z-10 px-5 mb-10">
+        <a href="#" id="aside_sobre_nosotros_volver-btn">&larr; volver</a>
+        <h2>Sobre nosotros</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim molestias sed reiciendis rerum!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim molestias sed reiciendis rerum!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim molestias sed reiciendis rerum!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim molestias sed reiciendis rerum!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim molestias sed reiciendis rerum!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dignissimos quisquam, maxime deserunt inventore eius facere perferendis doloribus nostrum repudiandae reiciendis. Illum alias distinctio reprehenderit enim molestias sed reiciendis rerum!</p>
     </aside>
     <footer class="w-full flex justify-center overflow-hidden relative h-24">
         <p id="footer-msg"

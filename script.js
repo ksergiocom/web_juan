@@ -14,10 +14,13 @@ const menuDropdownLis = menuDropdownUl.querySelectorAll("li");
 const footerMsg = document.getElementById('footer-msg');
 const bgVideo = document.getElementById('bg-video');
 const verCartaBtn = document.getElementById('main_section0-btn'); 
+const verSobreNosotrosBtn = document.getElementById('main_section9-btn'); 
 const asideVolverBtn = document.getElementById('aside_volver-btn'); 
+const asideSobreNostrosVolverBtn = document.getElementById('aside_sobre_nosotros_volver-btn'); 
 const main = document.querySelector('main');
 const header = document.querySelector('header');
-const aside = document.querySelector('aside');
+const asideCarta = document.querySelector('#aside-carta');
+const asideSobreNosotros = document.querySelector('#aside-sobre-nosotros');
 const footer = document.querySelector('footer');
 
 
@@ -242,7 +245,8 @@ function volverNavegacion(){
     scrollToNav = true
     footer.classList.remove('hidden');
     main.classList.remove('hidden');
-    aside.classList.add('hidden')
+    asideCarta.classList.add('hidden')
+    asideSobreNosotros.classList.add('hidden')
 }
 
 function verCarta(){
@@ -250,7 +254,15 @@ function verCarta(){
     scrollToNav = false
     footer.classList.add('hidden');
     main.classList.add('hidden');
-    aside.classList.remove('hidden')
+    asideCarta.classList.remove('hidden')
+}
+
+function verSobreNosotros(){
+    // closeMenu()
+    scrollToNav = false
+    footer.classList.add('hidden');
+    main.classList.add('hidden');
+    asideSobreNosotros.classList.remove('hidden')
 }
 
 /**
@@ -269,7 +281,15 @@ verCartaBtn.addEventListener('click', () => {
     verCarta();
 })
 
+verSobreNosotrosBtn.addEventListener('click', () => {
+    verSobreNosotros();
+})
+
 asideVolverBtn.addEventListener('click', () => {
+    volverNavegacion();
+})
+
+asideSobreNostrosVolverBtn.addEventListener('click', () => {
     volverNavegacion();
 })
 
@@ -278,7 +298,7 @@ menuDropdownNav1.addEventListener('click', () => {
     verCarta()
     closeMenu()
 })
-menuDropdownNav2.addEventListener('click', () => showPage(8))
+menuDropdownNav2.addEventListener('click', () => showPage(9))
 
 
 

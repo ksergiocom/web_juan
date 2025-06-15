@@ -120,11 +120,17 @@ function showPage(pageIdx, down=false){
 
     if(pageIdx!=0){
         footerMsg.classList.add('translate-y-36')
+        setTimeout(() => {
+            footerMsg.classList.add('hidden')
+        }, TIMEOUT);
         bgVideo.style.filter='blur(5px) grayscale(100%)';
         bgVideo.style.transition=".8s filter ease-in-out"
     }
     else{
-        footerMsg.classList.remove('translate-y-36')
+        footerMsg.classList.remove('hidden')
+        setTimeout(()=>{
+            footerMsg.classList.remove('translate-y-36')
+        }, TIMEOUT/2)
         bgVideo.style.filter='blur(0px) grayscale(100%)';
         bgVideo.style.transition=".8s filter ease-in-out"
     }
@@ -134,12 +140,12 @@ function showPage(pageIdx, down=false){
     pageSliders.forEach((slider, sliderIdx) => {
         if(sliderIdx==pageIdx) {
             slider.classList.add("scale-y-150");
-            slider.classList.remove("bg-white");
-            slider.classList.add("bg-lime-400");
+            slider.querySelector('span').classList.remove("bg-white");
+            slider.querySelector('span').classList.add("bg-lime-400");
         }else{
             slider.classList.remove("scale-y-150");
-            slider.classList.remove("bg-lime-400");
-            slider.classList.add("bg-white");
+            slider.querySelector('span').classList.remove("bg-lime-400");
+            slider.querySelector('span').classList.add("bg-white");
         }
     })
 
@@ -253,19 +259,20 @@ var scrollIdleTime = TIMEOUT; // time interval that we consider a new scroll eve
 window.addEventListener('wheel',wheel);
 
 function wheel(e){
+    e.preventDefault()
 
     if(menuIsOpen) return
 
     var delta = e.deltaY;
     var timeNow = performance.now();
-    if (delta > 0 && ( timeNow > lastScroll + scrollIdleTime) ) {
+    if (delta < 0 && ( timeNow > lastScroll + scrollIdleTime) ) {
         if(currentPage>0)
         showPage(currentPage-1,false);
         console.log('-------- wheel Event --------')
         console.log('arriba')
         console.log({currentPage})
 
-    } else if (delta < 0 && ( timeNow > lastScroll + scrollIdleTime)) {
+    } else if (delta > 0 && ( timeNow > lastScroll + scrollIdleTime)) {
         console.log('-------- wheel Event --------')
         console.log('abajo')
         console.log({currentPage})
@@ -284,10 +291,17 @@ function wheel(e){
 let touchStartY = null;
 
 window.addEventListener('touchstart', e => {
+    // e.preventDefault()
     touchStartY = e.touches[0].clientY;
 });
 
+// window.addEventListener('touchmove', e => {
+//     e.preventDefault()
+// })
+
 window.addEventListener('touchend', e => {
+    // e.preventDefault()
+
     if(menuIsOpen) return
 
     if (touchStartY === null) return;
@@ -296,13 +310,13 @@ window.addEventListener('touchend', e => {
     const deltaY = touchStartY - touchEndY;
     const timeNow = performance.now();
 
-    if (Math.abs(deltaY) > 50 && timeNow > lastScroll + scrollIdleTime) { // sensibilidad mínima
-        if (deltaY > 0 && currentPage < 9) {
+    if (Math.abs(deltaY) > 10 && timeNow > lastScroll + scrollIdleTime) { // sensibilidad mínima
+        if (deltaY > 0 && currentPage > 0) {
             // swipe hacia arriba
-            showPage(currentPage + 1, false);
-        } else if (deltaY < 0 && currentPage > 0) {
+            showPage(currentPage - 1, false);
+        } else if (deltaY < 0 && currentPage < 9) {
             // swipe hacia abajo
-            showPage(currentPage - 1, true);
+            showPage(currentPage + 1, true);
         }
 
         lastScroll = timeNow;

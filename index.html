@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,13 @@
     <style>
         /* Una animación custom :) */
         @keyframes bounce {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateX(-5%);
                 animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
             }
+
             50% {
                 transform: none;
                 animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -21,66 +25,100 @@
         .bounce {
             animation: bounce 1s infinite;
         }
+
+        /* Truco sucio para prevenir el page refresh en Android al hacer scroll hacia arriba */
+        body {
+            overscroll-behavior: contain;
+        }
     </style>
 </head>
+
 <body class="bg-gray-900 h-full flex flex-col justify-between">
-    <video id="bg-video" class="blur-none absolute top-0 left-0 h-screen w-screen object-cover grayscale opacity-30" autoplay muted loop src="video/cocktail_resize.mp4"></video>
+    <video id="bg-video" class="blur-none absolute top-0 left-0 h-dvh w-screen object-cover grayscale opacity-30"
+        autoplay muted playsinline loop src="video/cocktail_resize.mp4" type="video/mp4"></video>
     <header class="w-full h-fit text-white">
         <div class="flex justify-between items-center relative top-0 left-0 z-30 w-full p-5">
             <div class="flex gap-5 items-center">
-                 <h3><strong class="uppercase text-lime-400">Jigger</strong> Cocktail Bar</h3>
+                <h3><strong class="uppercase text-lime-400">Jigger</strong> Cocktail Bar</h3>
             </div>
             <div>
-                <button id="menu-btn" class=" flex flex-col gap-2">
-                    <span id="menu-btn_bar1" class="block w-6 h-1 bg-white transition-transform duration-300 origin-center rounded-sm"></span>
-                    <span id="menu-btn_bar2" class="block w-6 h-1 bg-white transition-transform duration-300 origin-center rounded-sm"></span>
+                <button id="menu-btn" class=" flex flex-col gap-2 cursor-pointer p-2">
+                    <span id="menu-btn_bar1"
+                        class="block w-6 h-1 bg-white transition-transform duration-300 origin-center rounded-sm"></span>
+                    <span id="menu-btn_bar2"
+                        class="block w-6 h-1 bg-white transition-transform duration-300 origin-center rounded-sm"></span>
                 </button>
             </div>
         </div>
         <!-- Menu -->
-        <div id="menu-dropdown" class="bg-linear-to-l from-lime-500 to-lime-700 absolute left-0 min-h-screen min-w-screen top-0 grid items-center justify-center transition duration-500 ease-in-out -translate-y-full z-20">
+        <div id="menu-dropdown"
+            class="bg-linear-to-l from-lime-500 to-lime-700 absolute left-0 min-h-dvh min-w-screen top-0 grid items-center justify-center transition duration-500 ease-in-out -translate-y-full z-20">
             <ul id="menu-dropdown_ul" class="flex flex-col gap-12">
-                <li class="overflow-hidden"><a id="menu-dropdown_nav0" class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Inicio</a></li>
-                <li class="overflow-hidden"><a id="menu-dropdown_nav1" class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Menú</a></li>
-                <li class="overflow-hidden"><a id="menu-dropdown_nav2" class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Contacto</a></li>
+                <li class="overflow-hidden"><a href="#" id="menu-dropdown_nav0"
+                        class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Inicio</a>
+                </li>
+                <li class="overflow-hidden"><a href="#" id="menu-dropdown_nav1"
+                        class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Menú</a>
+                </li>
+                <li class="overflow-hidden"><a href="#" id="menu-dropdown_nav2"
+                        class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-full duration-500">Contacto</a>
+                </li>
             </ul>
         </div>
     </header>
     <main class="h-full mx-5 relative items-center justify-center text-white block overflow-hidden items-center">
-        <section id="main_section0" class="h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
+        <section id="main_section0"
+            class="h-full w-full overflow-hidden flex flex-col justify-between duration-400 -translate-x-full hidden">
             <div class="flex gap-3 transition duration-300 ease-in-out -translate-x-full">
                 <!-- <img class="h-20 z-10 rounded-full p-2 bg-white transition duration-300 ease-in-out -translate-x-full" src="imgs/logo.png" alt="logo"> -->
                 <div class="transition duration-300 ease-in-out -translate-x-full">
                     <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">Viniste al</h2>
-                    <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">lugar <span class="text-lime-400 font-bold">correcto</span></h2>
+                    <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">lugar <span
+                            class="text-lime-400 font-bold">correcto</span></h2>
                 </div>
             </div>
-                <!-- <hr class="w-1/4 transition mt-5 mb-2 duration-300 ease-in-out -translate-x-full"> -->
-                <div class="text-right overflow-hidden transition duration-300 ease-in-out -translate-x-full">
-                    <a class="ml-auto mb-3 transition duration-300 ease-in-out -translate-x-full mb-5 bg-transparent border-1 text-white p-2 px-5 w-fit block" href="#">Ver menú</a>
-                    <p class="text-2xl transition duration-300 ease-in-out -translate-x-full"><span class="text-lime-400 font-bold">Brunch</span> & <span class="text-lime-400 font-bold">Pizza-Cocktail</span> bar</p>
-                    <p class="text-2xl transition duration-300 ease-in-out -translate-x-full">Sentirás la brisa del mar en cada sorbo</p>
-                </div>
+            <!-- <hr class="w-1/4 transition mt-5 mb-2 duration-300 ease-in-out -translate-x-full"> -->
+            <div class="text-right overflow-hidden transition duration-300 ease-in-out -translate-x-full">
+                <a class="ml-auto mb-3 transition duration-300 ease-in-out -translate-x-full mb-5 bg-transparent border-1 text-white p-2 px-5 w-fit block"
+                    href="#">Ver menú</a>
+                <p class="text-2xl transition duration-300 ease-in-out -translate-x-full"><span
+                        class="text-lime-400 font-bold">Brunch</span> & <span
+                        class="text-lime-400 font-bold">Pizza-Cocktail</span> bar</p>
+                <p class="text-2xl transition duration-300 ease-in-out -translate-x-full">Sentirás la brisa del mar en
+                    cada sorbo</p>
+            </div>
         </section>
-        <section id="main_section1" class="relative h-full w-full overflow-hidden flex flex-col justify-center gap-5 duration-400 transition -translate-x-full- hidden">
+        <section id="main_section1"
+            class="relative h-full w-full overflow-hidden flex flex-col justify-center gap-5 duration-400 transition -translate-x-full- hidden">
             <div class="flex flex-col absolute h-full w-full transition duration-300 ease-in-out -translate-x-full">
-                <div class="transition duration-300 ease-in-out -translate-x-full bg-black h-1/2 translate-y-7 translate-x-5 ">
-                    <img class="h-full w-full opacity-20 grayscale object-center object-cover " src="/imgs/img1.jpg" alt="img1">
+                <div
+                    class="transition duration-300 ease-in-out -translate-x-full bg-black h-1/2 translate-y-7 translate-x-5 ">
+                    <img class="h-full w-full opacity-20 grayscale object-center object-cover " src="/imgs/img1.jpg"
+                        alt="img1">
                 </div>
-                <div class="transition duration-300 ease-in-out -translate-x-full bg-black h-1/2 -translate-y-7 -translate-x-5 ">
-                    <img class="h-full w-full opacity-20 grayscale object-center object-cover " src="/imgs/img2.jpg" alt="img2">
+                <div
+                    class="transition duration-300 ease-in-out -translate-x-full bg-black h-1/2 -translate-y-7 -translate-x-5 ">
+                    <img class="h-full w-full opacity-20 grayscale object-center object-cover " src="/imgs/img2.jpg"
+                        alt="img2">
                 </div>
             </div>
-            <div class="z-10 flex flex-col w-2/3 mx-auto text-center gap-3 transition duration-300 ease-in-out -translate-x-full overflow-hidden">
+            <div
+                class="z-10 flex flex-col w-2/3 mx-auto text-center gap-3 transition duration-300 ease-in-out -translate-x-full overflow-hidden">
                 <h2 class="text-4xl transition duration-300 ease-in-out -translate-x-full">Deja lo cotidiano atrás</h2>
-                <h3 class="text-md transition duration-300 ease-in-out -translate-x-full">Sumérgete en la experiencia Jigger</h3>
-                <p class="transition duration-300 ease-in-out -translate-x-full">Haz ya tu pedido o reserva una mesa en <strong>+34 623.911.195</strong></p>
-                <a class="mt-3 transition duration-300 ease-in-out mx-auto -translate-x-full mb-5 bg-transparent border-1 text-white p-2 px-5 w-fit block" href="#">Contáctanos</a>
+                <h3 class="text-md transition duration-300 ease-in-out -translate-x-full">Sumérgete en la experiencia
+                    Jigger</h3>
+                <p class="transition duration-300 ease-in-out -translate-x-full">Haz ya tu pedido o reserva una mesa en
+                    <strong>+34 623.911.195</strong></p>
+                <a class="mt-3 transition duration-300 ease-in-out mx-auto -translate-x-full mb-5 bg-transparent border-1 text-white p-2 px-5 w-fit block"
+                    href="#">Contáctanos</a>
             </div>
         </section>
-        <section id="main_section2" class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
+        <section id="main_section2"
+            class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
             <!-- <img class="w-full h-1/2  transition duration-300 ease-in-out -translate-x-full object-center object-cover" src="imgs/img2.jpg" alt="img2"> -->
-            <video class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover" autoplay loop muted src="video/chispas_resize.mp4"></video>
+            <video
+                class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
+                autoplay loop muted playsinline src="video/chispas_resize.mp4" type="video/mp4"></video>
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¿Brunch?</h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full">Este verano, despierta con el mar
                 como compañia y disfruta de un
@@ -90,115 +128,162 @@
                 haz de cada mañana un momento
                 inolvidable.</p>
         </section>
-        <section id="main_section3" class=" h-full w-full overflow-hidden flex flex-col transition duration-400 -translate-x-full hidden">
+        <section id="main_section3"
+            class=" h-full w-full overflow-hidden flex flex-col transition duration-400 -translate-x-full hidden">
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¿”Good Morning”sin café?</h2>
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl mb-5">No es posible</h2>
-            <p class=" transition duration-300 ease-in-out -translate-x-full mb-5">¡Despierta con energía! Siente el sabor vibrante, el
+            <p class=" transition duration-300 ease-in-out -translate-x-full mb-5">¡Despierta con energía! Siente el
+                sabor vibrante, el
                 amanecer, el sol en cada taza y
                 convierte tu día en una experiencia
                 llena de frescura y vitalidad.</p>
-                <img class="w-full h-1/2  transition duration-300 ease-in-out -translate-x-full object-center object-cover" src="imgs/coffe.jpg" alt="coffe">
+            <img class="w-full h-1/2  transition duration-300 ease-in-out -translate-x-full object-center object-cover"
+                src="imgs/coffe.jpg" alt="coffe">
         </section>
-        <section id="main_section4" class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
-            <video class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover" autoplay loop muted src="video/cocktail_resize.mp4"></video>
+        <section id="main_section4"
+            class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
+            <video
+                class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
+                autoplay loop muted playsinline src="video/cocktail_resize.mp4" type="video/mp4"></video>
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">Sabor sin resaca</h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full">Vive la fiesta sin límites.
-Con nuestras bebidas sin alcohol
-harás que las vacaciones sean
-inolvidables. ¡Eso es seguro!</p>
+                Con nuestras bebidas sin alcohol
+                harás que las vacaciones sean
+                inolvidables. ¡Eso es seguro!</p>
         </section>
-        <section id="main_section5" class=" h-full w-full overflow-hidden flex flex-col transition duration-400 -translate-x-full hidden">
+        <section id="main_section5"
+            class=" h-full w-full overflow-hidden flex flex-col transition duration-400 -translate-x-full hidden">
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¡Para flipar!</h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full mb-5">Te apetece un cocktail?
 
-Déjalo en nuestras manos.
+                Déjalo en nuestras manos.
 
-Los chicos de Jigger saben lo que se
-hacen y pasando cinco minutos con
-ellos entenderás porqué.
+                Los chicos de Jigger saben lo que se
+                hacen y pasando cinco minutos con
+                ellos entenderás porqué.
 
-¿Te animas?</p>
-                <img class="w-full h-1/2  transition duration-300 ease-in-out -translate-x-full object-center object-cover" src="imgs/flipar.jpg" alt="flipar">
+                ¿Te animas?</p>
+            <img class="w-full h-1/2  transition duration-300 ease-in-out -translate-x-full object-center object-cover"
+                src="imgs/flipar.jpg" alt="flipar">
         </section>
-        <section id="main_section6" class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
-            <video class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover" autoplay loop muted src="video/pizza.mp4"></video>
+        <section id="main_section6"
+            class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
+            <video
+                class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
+                autoplay loop muted playsinline src="video/pizza.mp4" type="video/mp4"></video>
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">Pizza o Focaccia</h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full">Pizzas perfectas y focaccias suaves y
-crujientes, hechas con los mejores
-inglimeientes frescos. El lugar ideal si
-quieres disfrutar del auténtico sabor
-de italia.</p>
+                crujientes, hechas con los mejores
+                inglimeientes frescos. El lugar ideal si
+                quieres disfrutar del auténtico sabor
+                de italia.</p>
         </section>
-        <section id="main_section7" class=" h-full w-full overflow-hidden flex flex-col transition duration-400 -translate-x-full hidden">
+        <section id="main_section7"
+            class=" h-full w-full overflow-hidden flex flex-col transition duration-400 -translate-x-full hidden">
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">¿Algo dulce?</h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full mb-5">“Endulza tu día con nuestros
-irresistibles postres, hechos con
-amor y los mejores inglimeientes
-para que cada bocado sea una
-explosión de sabor”</p>
-                <video class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover" autoplay loop muted src="video/dulce.mp4"></video>
+                irresistibles postres, hechos con
+                amor y los mejores inglimeientes
+                para que cada bocado sea una
+                explosión de sabor”</p>
+            <video
+                class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
+                autoplay loop muted playsinline src="video/dulce.mp4" type="video/mp4"></video>
         </section>
-        <section id="main_section8" class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
-            <video class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover" autoplay loop muted src="video/hooka.mp4"></video>
+        <section id="main_section8"
+            class=" h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
+            <video
+                class="w-full h-1/2 w-full transition duration-300 ease-in-out -translate-x-full object-center object-cover"
+                autoplay loop muted playsinline src="video/hooka.mp4" type="video/mp4"></video>
             <h2 class=" transition duration-300 ease-in-out -translate-x-full text-4xl">HOOKAH</h2>
             <p class=" transition duration-300 ease-in-out -translate-x-full">Eleva tu experiencia con nuestras
-SHISHAS, una forma única de
-compartir y disfrutar de la noche
-con tus amigos.
+                SHISHAS, una forma única de
+                compartir y disfrutar de la noche
+                con tus amigos.
 
-“Sumérgete en una experiencia
-sensorial sin igual”</p>
+                “Sumérgete en una experiencia
+                sensorial sin igual”</p>
         </section>
-        <section id="main_section9" class="h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
-        <div class="bg-white h-full w-full transition duration-300 ease-in-out -translate-x-full relative">
-            
-            <!-- Imagen decorativa centrada -->
-            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <img
-                class="opacity-10 w-full h-auto object-contain"
-                src="imgs/logo.png"
-                alt="logo"
-            />
-            </div>
+        <section id="main_section9"
+            class="h-full w-full overflow-hidden flex flex-col gap-5 transition duration-400 -translate-x-full hidden">
+            <div class="bg-white h-full w-full transition duration-300 ease-in-out -translate-x-full relative">
 
-            <!-- Contenido de texto por encima, pero sin superposición directa -->
-            <div class="relative h-full z-10 p-8 flex flex-col gap-4 justify-evenly text-gray-900 transition duration-300 ease-in-out -translate-x-full">
-                <div class="z-10 p-3 transition duration-300 ease-in-out -translate-x-full">
-                    <h3 class="text-3xl transition duration-300 ease-in-out -translate-x-full">Disfruta con nosotros</h3>
-                    <p class=" transition duration-300 ease-in-out -translate-x-full">C/ passatge baladre 49 , Cala blanca</p>
-                    <p class=" transition duration-300 ease-in-out -translate-x-full">(Ciutadella de Menorca)  CP 07769</p>
-                    <p class=" transition duration-300 ease-in-out -translate-x-full">+34  623.911.195</p>
-                    <a class=" transition duration-300 ease-in-out -translate-x-full" href="mailto:jiggercookingcocktail@gmail.com">jiggercookingcocktail@gmail.com</a>
+                <!-- Imagen decorativa centrada -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <img class="opacity-10 w-full h-auto object-contain" src="imgs/logo.png" alt="logo" />
                 </div>
-                <hr class="z-10 transition duration-300 ease-in-out -translate-x-full">
-                <div class="z-10 p-3 transition duration-300 ease-in-out -translate-x-full">
-                    <h3 class="text-3xl transition duration-300 ease-in-out -translate-x-full">Horario</h3>
-                    <p class=" transition duration-300 ease-in-out -translate-x-full">De lunes a domingo:</p>
-                    <p class=" transition duration-300 ease-in-out -translate-x-full">(09.00h a 13.00h  /  18.00h a 03.00h)</p>
-                    <p class=" transition duration-300 ease-in-out -translate-x-full">Miércoles <strong>cerrado</strong></p>
-                </div>
-            </div>
 
-        </div>
+                <!-- Contenido de texto por encima, pero sin superposición directa -->
+                <div
+                    class="relative h-full z-10 p-8 flex flex-col gap-4 justify-evenly text-gray-900 transition duration-300 ease-in-out -translate-x-full">
+                    <div class="z-10 p-3 transition duration-300 ease-in-out -translate-x-full">
+                        <h3 class="text-3xl transition duration-300 ease-in-out -translate-x-full">Disfruta con nosotros
+                        </h3>
+                        <p class=" transition duration-300 ease-in-out -translate-x-full">C/ passatge baladre 49 , Cala
+                            blanca</p>
+                        <p class=" transition duration-300 ease-in-out -translate-x-full">(Ciutadella de Menorca) CP
+                            07769</p>
+                        <p class=" transition duration-300 ease-in-out -translate-x-full">+34 623.911.195</p>
+                        <a class=" transition duration-300 ease-in-out -translate-x-full"
+                            href="mailto:jiggercookingcocktail@gmail.com">jiggercookingcocktail@gmail.com</a>
+                    </div>
+                    <hr class="z-10 transition duration-300 ease-in-out -translate-x-full">
+                    <div class="z-10 p-3 transition duration-300 ease-in-out -translate-x-full">
+                        <h3 class="text-3xl transition duration-300 ease-in-out -translate-x-full">Horario</h3>
+                        <p class=" transition duration-300 ease-in-out -translate-x-full">De lunes a domingo:</p>
+                        <p class=" transition duration-300 ease-in-out -translate-x-full">(09.00h a 13.00h / 18.00h a
+                            03.00h)</p>
+                        <p class=" transition duration-300 ease-in-out -translate-x-full">Miércoles
+                            <strong>cerrado</strong></p>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
 
     </main>
     <footer class="w-full flex justify-center overflow-hidden relative h-24">
-        <p id="footer-msg" class="bounce text-white rotate-90 w-fit origin-bottom-right -translate-x-full p-1 absolute left-0 bottom-0 transition duration-500">Scroll &rarr;</p>
-        <div id="page-slide" class="flex gap-4 justify-center p-5 items-end">
-            <span id="page-slide_section0" class="w-0.5 h-6 bg-white block rounded-sm scale-y-150 transition duration-500 ease-in-out"></span>
-            <span id="page-slide_section1" class="w-0.5 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
-            <span id="page-slide_section2" class="w-0.5 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
-            <span id="page-slide_section3" class="w-0.5 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
-            <span id="page-slide_section4" class="w-0.5 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
-            <span id="page-slide_section5" class="w-0.5 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
-            <span id="page-slide_section6" class="w-0.5 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
-            <span id="page-slide_section7" class="w-0.5 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
-            <span id="page-slide_section8" class="w-0.5 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
-            <span id="page-slide_section9" class="w-0.5 h-6 bg-white block rounded-sm transition duration-500 ease-in-out"></span>
+        <p id="footer-msg"
+            class="bounce text-white rotate-90 w-fit origin-bottom-right -translate-x-full p-1 absolute left-0 bottom-0 transition duration-500">
+            Scroll &rarr;
+        </p>
+        <div id="page-slide" class="flex justify-center items-end gap-1">
+            <div id="page-slide_section0" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
+                <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
+            </div>
+            <div id="page-slide_section1" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
+                <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
+            </div>
+            <div id="page-slide_section2" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
+                <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
+            </div>
+            <div id="page-slide_section3" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
+                <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
+            </div>
+            <div id="page-slide_section4" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
+                <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
+            </div>
+            <div id="page-slide_section5" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
+                <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
+            </div>
+            <div id="page-slide_section6" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
+                <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
+            </div>
+            <div id="page-slide_section7" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
+                <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
+            </div>
+            <div id="page-slide_section8" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
+                <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
+            </div>
+            <div id="page-slide_section9" class="cursor-pointer inline-block p-2 transition duration-500 ease-in-out">
+                <span class="w-0.5 h-6 bg-white block rounded-sm"></span>
+            </div>
         </div>
     </footer>
+
+
     <script src="./script.js"></script>
 </body>
+
 </html>

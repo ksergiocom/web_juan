@@ -14,14 +14,17 @@ Está pendiente de agregar contenido, unificar el diseño, optimizar recursos, e
 ## ToDos;
 1. Mejorar responsive movil horizontal
 2. Mejorar responsive otros dispositivos
-3. Optimizar recursos
-4. Optimizar SEO, metadatos, etc.
 5. Agregar contenido
 6. Agregar secciones a la URL y navegacion directa hacia secciones.
 
 --------------
 
 ## Log
+
+### 2025-07-16
+Agregando Scroll horizontal, optimizando media y agregado favicon.
+Se ha quitado algunas cosas que bloqueaban el TCL para mejorar rendimiento.
+Se han agregado metadatos y cosas extras.
 
 ### 2025-07-15
 Primera versión responsive de la web funcional.

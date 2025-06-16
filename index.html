@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jigger Cocktail Bar: el lugar ideal para disfrutar de copas, fiesta, ambiente único y buena compañía en Menorca. Ven a vivir la mejor experiencia entre amigos con música, cócteles y diversión junto al mar." />
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <link href="./output.css" rel="stylesheet">
     <title>Yoan</title>
@@ -16,15 +17,17 @@
 </head>
 
 <body class="bg-gray-900 min-h-dvh flex flex-col justify-between w-screen">
-    <video id="bg-video" class="blur-none fixed top-0 left-0 h-dvh w-screen object-cover grayscale opacity-30" autoplay
+    <video id="bg-video" class="blur-none fixed top-0 left-0 h-dvh w-screen object-cover grayscale opacity-0 transition duration-1000" autoplay
         muted playsinline loop src="video/cocktail_resize.mp4" type="video/mp4"></video>
     <header class="w-full h-fit text-white flex sticky top-0 z-20 transition-colors duration-500 backdrop-blur-none">
         <div id="menu-layout" class="flex justify-between items-center top-0 left-0 z-30 w-full p-5 xl:p-8 xl:text-xl">
-            <div class="flex gap-5 items-center">
-                <h3><strong class="uppercase text-lime-400">Jigger</strong> Cocktail Bar</h3>
+            <div class="flex gap-3 items-center">
+                <a href="/"><h3><strong class="uppercase text-lime-400">Jigger</strong> Cocktail Bar</h3></a>
+                <span><a href="https://www.instagram.com/jiggermenorca?igsh=eGR3bWVucjZhMGNi&utm_source=qr"><img class="h-7 scale-80" src="imgs/insta_logo_white.svg" alt="insta_logo"></a></span>
+                <span><a href="https://www.youtube.com/@IvanGarciaGarc%C3%ADadelaPastora"><img class="h-7" src="imgs/youtube_logo_white.svg" alt="youtube_logo"></a></span>
             </div>
-            <div>
-                <button id="menu-btn" class=" flex flex-col gap-2 cursor-pointer">
+            <div class="flex gap-3">
+                <button id="menu-btn" aria-label="menu" class=" flex flex-col justify-center gap-2 cursor-pointer">
                     <span id="menu-btn_bar1"
                         class="block w-6 h-1 bg-white transition-transform duration-300 origin-center rounded-sm"></span>
                     <span id="menu-btn_bar2"
@@ -35,7 +38,7 @@
         <!-- Menu -->
         <div id="menu-dropdown"
             class="bg-linear-to-l from-lime-500 to-lime-700 fixed left-0 min-h-dvh min-w-screen top-0 grid items-center justify-center transition duration-500 ease-in-out translate-y-[-100vh] z-20">
-            <ul id="menu-dropdown_ul" class="flex flex-col gap-12">
+            <ul id="menu-dropdown_ul" class="flex flex-col gap-8 xl:gap-12">
                 <li class="overflow-hidden"><a href="#" id="menu-dropdown_nav0"
                         class="block text-5xl tracking-wide uppercase ease-in-out transition translate-y-[100vh] duration-500">Inicio</a>
                 </li>
@@ -53,9 +56,9 @@
             <main
                 class="flex-1 mx-5 xl:mx-8 xl:mb-10 relative items-center justify-center text-white flex overflow-hidden items-center z-0">
                 <section id="main_section0"
-                    class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 translate-x-[-100vw] hidden">
+                    class="absolute inset-0 h-full w-full overflow-hidden flex flex-col justify-between duration-400 translate-x-[-100vw]">
                     <div class="flex gap-3 transition duration-300 ease-in-out translate-x-[-100vw]">
-                        <!-- <img class="h-20 z-10 rounded-full p-2 bg-white transition duration-300 ease-in-out translate-x-[-100vw]" src="imgs/logo.png" alt="logo"> -->
+                        <!-- <img class="h-20 z-10 rounded-full p-2 bg-white transition duration-300 ease-in-out translate-x-[-100vw]" src="imgs/logo.webp" alt="logo"> -->
                         <div class="transition duration-300 ease-in-out translate-x-[-100vw]">
                             <h2 class="text-4xl xl:text-8xl transition duration-300 ease-in-out translate-x-[-100vw]">
                                 Viniste al</h2>
@@ -92,12 +95,12 @@
                         <div
                             class="transition duration-300 ease-in-out translate-x-[-100vw] bg-black h-1/2 translate-y-7 xl:translate-y-24 translate-x-5 xl:translate-x-24">
                             <img class="h-full w-full opacity-20 grayscale object-center object-cover "
-                                src="/imgs/img1.jpg" alt="img1">
+                                src="/imgs/img1.webp" alt="img1">
                         </div>
                         <div
                             class="transition duration-300 ease-in-out translate-x-[-100vw] bg-black h-1/2 -translate-y-7 xl:-translate-y-24 -translate-x-5 xl:-translate-x-24">
                             <img class="h-full w-full opacity-20 grayscale object-center object-cover "
-                                src="/imgs/img2.jpg" alt="img2">
+                                src="/imgs/img2.webp" alt="img2">
                         </div>
                     </div>
                     <div
@@ -141,7 +144,7 @@
                         convierte tu día en una <span class="text-lime-400 font-semibold">experiencia</span>
                         llena de frescura y vitalidad.</p>
                     <img class="w-full h-1/2 mt-2 transition duration-300 ease-in-out translate-x-[-100vw] object-center object-cover"
-                        src="imgs/coffe.jpg" alt="coffe">
+                        src="imgs/coffe.webp" alt="coffe">
                 </section>
                 <section id="main_section3"
                     class="absolute inset-0 h-full w-full xl:w-1/3 xl:mx-auto xl:justify-center overflow-hidden flex flex-col duration-400 translate-x-[-100vw] hidden">
@@ -172,13 +175,13 @@
 
                         ¿Te animas?</p>
                     <img class="w-full h-1/2  transition duration-300 ease-in-out translate-x-[-100vw] object-center object-cover"
-                        src="imgs/flipar.jpg" alt="flipar">
+                        src="imgs/flipar.webp" alt="flipar">
                 </section>
                 <section id="main_section5"
                     class="absolute inset-0 h-full w-full xl:w-1/3 xl:mx-auto xl:justify-center overflow-hidden flex flex-col gap-3 duration-400 translate-x-[-100vw] hidden">
                     <video
                         class="w-full mb-2 h-1/2 w-full transition duration-300 ease-in-out translate-x-[-100vw] object-center object-cover"
-                        autoplay loop muted playsinline src="video/pizza.mp4" type="video/mp4"></video>
+                        autoplay loop muted playsinline src="video/pizza_resize.mp4" type="video/mp4"></video>
                     <h2 class=" transition duration-300 ease-in-out translate-x-[-100vw] text-4xl xl:text-6xl"><span
                             class="text-lime-400 font-semibold">Pizza</span> o <span
                             class="text-lime-400 font-semibold">Focaccia</span></h2>
@@ -201,13 +204,13 @@
                         explosión de <span class="text-lime-400 font-semibold">sabor</span>”</p>
                     <video
                         class="w-full h-1/2 w-full transition duration-300 mt-2 ease-in-out translate-x-[-100vw] object-center object-cover"
-                        autoplay loop muted playsinline src="video/dulce.mp4" type="video/mp4"></video>
+                        autoplay loop muted playsinline src="video/dulce_resize.mp4" type="video/mp4"></video>
                 </section>
                 <section id="main_section7"
                     class="absolute inset-0 h-full w-full xl:w-1/3 xl:mx-auto xl:justify-center overflow-hidden flex flex-col gap-3 duration-400 translate-x-[-100vw] hidden">
                     <video
                         class="w-full h-1/2 w-full transition duration-300 ease-in-out mb-3 translate-x-[-100vw] object-center object-cover"
-                        autoplay loop muted playsinline src="video/hooka.mp4" type="video/mp4"></video>
+                        autoplay loop muted playsinline src="video/hooka_resize.mp4" type="video/mp4"></video>
                     <h2 class=" transition duration-300 ease-in-out translate-x-[-100vw] text-4xl xl:text-6xl"><span
                             class="text-lime-400 font-semibold">HOOKAH</span></h2>
                     <p class=" transition duration-300 ease-in-out translate-x-[-100vw] xl:text-xl">Eleva tu experiencia
@@ -227,7 +230,7 @@
                     <div
                         class="mb-5 bg-white items-center w-fit rounded-full h-1/3 inset-0 flex items-center justify-center transition duration-300 ease-in-out translate-x-[-100vw]">
                         <img class="m-auto h-full object-contain transition duration-300 ease-in-out translate-x-[-100vw]"
-                            src="imgs/logo.png" alt="logo" />
+                            src="imgs/logo.webp" alt="logo" />
                     </div>
 
                     <!-- <h3 class="text-3xl transition duration-300 ease-in-out translate-x-[-100vw]">Disfruta con nosotros
@@ -945,7 +948,7 @@
 
                 <h3 class="text-2xl xl:text-5xl font-semibold mt-14">Bebidas únicas</h3>
                 <video class="w-full aspect-video object-center object-cover mt-3" autoplay loop muted playsinline
-                    src="video/drink.mp4" type="video/mp4"></video>
+                    src="video/drink_resize.mp4" type="video/mp4"></video>
 
                 <p class="mt-2">
                     Cócteles de autor preparados con pasión, combinados clásicos reinventados y una carta con los
@@ -956,7 +959,7 @@
                 <h3 class="text-2xl xl:text-5xl font-semibold mt-14">Take away <span class="italic">“Para llevar”</span>
                 </h3>
                 <video class="w-full aspect-video object-center object-cover mt-3" autoplay loop muted playsinline
-                    src="video/delivery.mp4" type="video/mp4"></video>
+                    src="video/delivery_resize.mp4" type="video/mp4"></video>
 
                 <p class="mt-2">
                     ¿Sin tiempo para quedarte? Llévate la experiencia Jigger contigo.
@@ -966,7 +969,7 @@
 
                 <h3 class="text-2xl xl:text-5xl font-semibold mt-14">Ocio nocturno</h3>
                 <video class="w-full aspect-video object-center object-cover mt-3" autoplay loop muted playsinline
-                    src="video/pool.mp4" type="video/mp4"></video>
+                    src="video/pool_resize.mp4" type="video/mp4"></video>
 
                 <p class="mt-2">
                     Cuando cae el sol, Jigger se transforma. Música en vivo, shishas, billar, dardos y un ambiente que

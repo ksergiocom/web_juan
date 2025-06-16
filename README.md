@@ -6,8 +6,8 @@ Creando una landing page mobile first que realiza toda la navegación mediante a
 
 Está pendiente de agregar contenido, unificar el diseño, optimizar recursos, etc.
 
-Aquí se puede ver er resultado:
-[text](https://jigger-web.web.app/)
+[Aquí](https://jigger-web.web.app/) se puede ver er resultado.
+
 
 ---------------
 
@@ -16,6 +16,8 @@ Aquí se puede ver er resultado:
 2. Mejorar responsive otros dispositivos
 3. Optimizar recursos
 4. Optimizar SEO, metadatos, etc.
+5. Agregar contenido
+6. Agregar secciones a la URL y navegacion directa hacia secciones.
 
 --------------
 

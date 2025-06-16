@@ -278,6 +278,11 @@ function verSobreNosotros(){
  * Events listeners -----------------------------------------------------------
  */
 
+bgVideo.addEventListener('canplaythrough', () => {
+    bgVideo.classList.add('opacity-30')
+    bgVideo.classList.remove('opacity-0')
+})
+
 menuBtn.addEventListener('click', () => {
     if(menuIsOpen){
         closeMenu();

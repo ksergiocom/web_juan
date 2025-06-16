@@ -1,4 +1,8 @@
+console.log('################')
 console.log("www.ksergio.com");
+console.log('################')
+
+
 
 // Nagevacion e interactivos
 const menuBtn = document.getElementById('menu-btn'); 
@@ -75,11 +79,6 @@ function  openMenu() {
     menuBtnBar1.classList.add('translate-y-[6px]');
     menuBtnBar2.classList.add('-rotate-45');
     menuBtnBar2.classList.add('-translate-y-[6px]');
-
-    // setTimeout(() => {
-    //     menuLayout.classList.add('fixed');
-    //     menuLayout.classList.remove('relative');
-    // },TIMEOUT)
     
     /**
      * La duración de desplegar el menu es de 500ms (HARDCODEADO en la clase).
@@ -101,11 +100,6 @@ function  closeMenu() {
     menuBtnBar2.classList.remove('-rotate-45');
     menuBtnBar2.classList.remove('-translate-y-[6px]');
 
-    // menuLayout.classList.remove('fixed');
-    // setTimeout(()=>{
-    //     menuLayout.classList.add('relative');
-    // },TIMEOUT)
-    
     /**
      * La duración de desplegar el menu es de 500ms (HARDCODEADO en la clase).
      * Vamos a crear un pequeño retardo para que se muestren ligeramente más tarde (mientras se despliega).
@@ -121,12 +115,6 @@ function  closeMenu() {
 
 function showPage(pageIdx, down=false){
     volverNavegacion()
-
-    console.log('-------- Show Page --------')
-    console.log({pageIdx,currentPage})
-
- 
-
     let timeoutCustom = TIMEOUT;
 
     if(menuIsOpen){
@@ -202,9 +190,6 @@ function showPage(pageIdx, down=false){
 }
 
 function hidePage(pageIdx, down = false) {
-    console.log('-------- hide Page --------')
-    console.log({ pageIdx, currentPage });
-
     const section = mainSections[pageIdx];
     let delay = TIMEOUT;
 
@@ -291,31 +276,13 @@ menuBtn.addEventListener('click', () => {
     }
 })
 
-verCartaBtn.addEventListener('click', () => {
-    verCarta();
-})
-
-verSobreNosotrosBtn.addEventListener('click', () => {
-    verSobreNosotros();
-})
-
-asideVolverBtn.addEventListener('click', () => {
-    volverNavegacion();
-})
-
-asideSobreNostrosVolverBtn.addEventListener('click', () => {
-    volverNavegacion();
-})
-
+verCartaBtn.addEventListener('click', () => verCarta())
+verSobreNosotrosBtn.addEventListener('click', () => verSobreNosotros())
+asideVolverBtn.addEventListener('click', () => volverNavegacion())
+asideSobreNostrosVolverBtn.addEventListener('click', () => volverNavegacion())
 menuDropdownNav0.addEventListener('click', () => showPage(0))
-menuDropdownNav1.addEventListener('click', () => {
-    verCarta()
-    closeMenu()
-})
 menuDropdownNav2.addEventListener('click', () => showPage(8))
-
 contactanosBtn.addEventListener('click', () => showPage(8))
-
 pageSlideSection0.addEventListener('click', () => showPage(0))
 pageSlideSection2.addEventListener('click', () => showPage(2))
 pageSlideSection1.addEventListener('click', () => showPage(1))
@@ -325,6 +292,16 @@ pageSlideSection5.addEventListener('click', () => showPage(5))
 pageSlideSection6.addEventListener('click', () => showPage(6))
 pageSlideSection7.addEventListener('click', () => showPage(7))
 pageSlideSection8.addEventListener('click', () => showPage(8))
+menuDropdownNav1.addEventListener('click', () => {
+    verCarta()
+    closeMenu()
+})
+
+
+
+
+
+
 
 
 
@@ -332,37 +309,47 @@ pageSlideSection8.addEventListener('click', () => showPage(8))
 /**
  * Eventos Wheel y scroll (para manejar la pagina ) ---------------------------
  */
-// var scrollingDirection = 0; //idle
 var lastScroll = TIMEOUT;
 var scrollIdleTime = TIMEOUT; // time interval that we consider a new scroll event
 
 window.addEventListener('wheel',wheel);
 
-function wheel(e){
-    // e.preventDefault()
-    
-    if(!scrollToNav) return
-    if(menuIsOpen) return
+var lastScroll = TIMEOUT;
+var scrollIdleTime = TIMEOUT; // tiempo mínimo entre eventos scroll
 
-    var delta = e.deltaY;
-    var timeNow = performance.now();
-    if (delta < 0 && ( timeNow > lastScroll + scrollIdleTime) ) {
-        if(currentPage>0)
-        showPage(currentPage-1,false);
-        console.log('-------- wheel Event --------')
-        console.log('arriba')
-        console.log({currentPage})
+window.addEventListener('wheel', wheel, { passive: false });
 
-    } else if (delta > 0 && ( timeNow > lastScroll + scrollIdleTime)) {
-        console.log('-------- wheel Event --------')
-        console.log('abajo')
-        console.log({currentPage})
+function wheel(e) {
 
-        if(currentPage<8)
-        showPage(currentPage+1, true);
+    if (!scrollToNav || menuIsOpen) return;
+
+    const deltaX = e.deltaX;
+    const deltaY = e.deltaY;
+    const timeNow = performance.now();
+
+    const enoughTimePassed = timeNow > lastScroll + scrollIdleTime;
+
+    if (!enoughTimePassed) return;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // Scroll horizontal tiene prioridad
+        if (deltaX > 0 && currentPage < mainSections.length) {
+            showPage(currentPage + 1, true);
+        } else if (deltaX < 0 && currentPage > 0) {
+            showPage(currentPage - 1, false);
+        }
+    } else {
+        // Opcional: también puedes manejar scroll vertical si lo deseas
+        if (deltaY > 0 && currentPage < mainSections.length) {
+            showPage(currentPage + 1, true);
+        } else if (deltaY < 0 && currentPage > 0) {
+            showPage(currentPage - 1, false);
+        }
     }
+
     lastScroll = timeNow;
 }
+
 
 
 
@@ -375,10 +362,6 @@ window.addEventListener('touchstart', e => {
     // e.preventDefault()
     touchStartY = e.touches[0].clientY;
 });
-
-// window.addEventListener('touchmove', e => {
-//     e.preventDefault()
-// })
 
 window.addEventListener('touchend', e => {
     // e.preventDefault()

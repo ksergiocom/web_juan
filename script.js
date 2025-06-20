@@ -333,14 +333,14 @@ function wheel(e) {
 
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
         // Scroll horizontal tiene prioridad
-        if (deltaX > 0 && currentPage < mainSections.length) {
+        if (deltaX > 0 && currentPage < mainSections.length - 1) {
             showPage(currentPage + 1, true);
         } else if (deltaX < 0 && currentPage > 0) {
             showPage(currentPage - 1, false);
         }
     } else {
         // Opcional: también puedes manejar scroll vertical si lo deseas
-        if (deltaY > 0 && currentPage < mainSections.length) {
+        if (deltaY > 0 && currentPage < mainSections.length - 1 ) {
             showPage(currentPage + 1, true);
         } else if (deltaY < 0 && currentPage > 0) {
             showPage(currentPage - 1, false);
